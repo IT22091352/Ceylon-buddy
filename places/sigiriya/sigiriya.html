@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigiriya - The Majestic Lion Rock of Sri Lanka</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/places/sigiriya/assets/img3.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+        
+        .header-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        
+        .header-content p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        section {
+            margin-bottom: 60px;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: #2a6041;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #2a6041;
+            padding-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .importance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .importance-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .importance-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .importance-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .importance-item-content {
+            padding: 20px;
+        }
+        
+        .importance-item h3 {
+            color: #2a6041;
+            margin-bottom: 10px;
+        }
+        
+        .tourist-info {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .tourist-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .tourist-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .tourist-text ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .tourist-text li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            background-color: #2a6041;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #2a6041;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top:hover {
+            background-color: #1e4930;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header-content p {
+                font-size: 1.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .tourist-info {
+                flex-direction: column;
+            }
+            
+            .tourist-image {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="background-image: url('/places/sigiriya/assets/img3.jpg');">
+        <div class="header-content" >
+            <h1>Sigiriya – The Majestic Lion Rock</h1>
+            <p>Sri Lanka's Ancient Wonder and UNESCO World Heritage Site</p>
+        </div>
+        
+    </header>
+    
+    <div class="container">
+        <section id="introduction">
+            <h2>What is Sigiriya</h2>
+            <p>Sigiriya, also known as the Lion Rock, is one of Sri Lanka's most iconic landmarks and a UNESCO World Heritage Site. Rising 200 meters above the surrounding plains, this ancient rock fortress is a marvel of architecture, history, and artistry. It is located in the Matale District near Dambulla, within Sri Lanka's Cultural Triangle, making it a must-visit destination for history lovers and travelers seeking breathtaking views.</p>
+            <div style="width: 100%; height: 400px; background-image: url('/places/sigiriya/assets/img3.jpg'); background-size: cover; background-position: center; border-radius: 8px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);"></div>
+        </section>
+        
+        <section id="history">
+            <h2>History – When, How, and Who Built Sigiriya?</h2>
+            <p>Sigiriya was built in the 5th century AD by King Kashyapa I (477–495 AD) as his royal citadel. After overthrowing his father, King Dhatusena, Kashyapa feared revenge from his half-brother Moggallana and moved his capital to this massive rock, transforming it into an impenetrable fortress.</p>
+            <p>The king constructed a magnificent palace on the summit, featuring advanced engineering, beautiful water gardens, and intricate frescoes. However, after Kashyapa's defeat in battle, Sigiriya was abandoned as a royal residence and later became a Buddhist monastery until the 14th century.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 30px;">
+                <div style="flex: 1; min-width: 300px; height: 250px; background-image: url('/places/sigiriya/assets/img3.jpg'); background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></div>
+                <div style="flex: 1; min-width: 300px; height: 250px; background-image: url('/places/sigiriya/assets/img3.jpg'); background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></div>
+            </div>
+        </section>
+        
+        <section id="importance">
+            <h2>Why is Sigiriya Important?</h2>
+            <div class="importance-grid">
+                <div class="importance-item">
+                    <img src="/places/sigiriya/assets/img3.jpg" alt="Architectural Marvel">
+                    <div class="importance-item-content">
+                        <h3>1. Architectural Marvel</h3>
+                        <p>Sigiriya showcases one of the most advanced urban planning systems of the ancient world, with sophisticated water gardens, fortifications, and an elaborate palace complex.</p>
+                    </div>
+                </div>
+                
+                <div class="importance-item">
+                    <img src="/places/sigiriya/assets/img3.jpg" alt="Sigiriya Maidens">
+                    <div class="importance-item-content">
+                        <h3>2. Frescoes of the Sigiriya Maidens</h3>
+                        <p>The rock is adorned with vibrant frescoes depicting celestial maidens, believed to be either goddesses or members of Kashyapa's court.</p>
+                    </div>
+                </div>
+                
+                <div class="importance-item">
+                    <img src="/places/sigiriya/assets/img3.jpg" alt="Mirror Wall">
+                    <div class="importance-item-content">
+                        <h3>3. The Mirror Wall</h3>
+                        <p>Originally polished to reflect one's image, this wall contains centuries-old inscriptions left by visitors, some dating back to the 8th century.</p>
+                    </div>
+                </div>
+                
+                <div class="importance-item">
+                    <img src="/places/sigiriya/assets/img3.jpg" alt="Lion's Gate">
+                    <div class="importance-item-content">
+                        <h3>4. The Lion's Gate</h3>
+                        <p>The fortress gets its name from the grand entrance, where a giant stone-carved lion once stood, guarding the pathway to the summit.</p>
+                    </div>
+                </div>
+                
+                <div class="importance-item">
+                    <img src="/places/sigiriya/assets/img3.jpg" alt="Breathtaking Views">
+                    <div class="importance-item-content">
+                        <h3>5. Breathtaking Views</h3>
+                        <p>The summit offers panoramic views of lush forests, surrounding villages, and distant mountains, making the climb truly rewarding.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tourist-attraction">
+            <h2>Sigiriya as a Tourist Attraction</h2>
+            <div class="tourist-info">
+                <div class="tourist-image" style="background-image: url('/api/placeholder/800/1200');"></div>
+                <div class="tourist-text">
+                    <p>Sigiriya is one of Sri Lanka's most visited sites, drawing thousands of local and international tourists each year. Visitors can:</p>
+                    <ul>
+                        <li>Climb to the top of the rock for an awe-inspiring view and a glimpse into Sri Lanka's royal history.</li>
+                        <li>Explore the water gardens, one of the world's oldest landscaped gardens.</li>
+                        <li>Admire the frescoes, showcasing the artistic brilliance of ancient Sri Lanka.</li>
+                        <li>Visit the Sigiriya Museum, which provides insights into the site's history, archaeology, and excavation findings.</li>
+                    </ul>
+                    <p>The site is open daily from sunrise to sunset, with guided tours available in multiple languages.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Sigiriya is not just a historical site; it is a symbol of Sri Lanka's rich cultural heritage and an architectural masterpiece that continues to amaze visitors. Whether you're a history buff, nature lover, or adventure seeker, Sigiriya offers an unforgettable experience that transports you back in time.</p>
+            <div style="width: 100%; height: 300px; background-image: url('/api/placeholder/1200/600'); background-size: cover; background-position: center; border-radius: 8px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);"></div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Sigiriya Heritage Site. All rights reserved.</p>
+        <p>Plan your visit to one of Sri Lanka's most magnificent historical treasures.</p>
+    </footer>
+    
+    <div class="scroll-top" id="scrollTop">↑</div>
+    
+    <script>
+        // JavaScript for scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Image hover effect for importance items
+        const importanceItems = document.querySelectorAll('.importance-item');
+        
+        importanceItems.forEach(item => {
+            const img = item.querySelector('img');
+            const originalSrc = img.src;
+            
+            item.addEventListener('mouseenter', function() {
+                // Just a visual effect for demonstration - in a real site you might have different images
+                img.style.transform = 'scale(1.05)';
+                img.style.transition = 'transform 0.5s ease';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                img.style.transform = 'scale(1)';
+            });
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
