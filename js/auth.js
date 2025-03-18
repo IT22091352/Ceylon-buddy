@@ -34,11 +34,8 @@ function getCurrentUser() {
 
 // Logout function
 function logout() {
-    // Clear localStorage
     localStorage.removeItem('ceylonbuddyUser');
-    
-    // Redirect to index page
-    window.location.href = '/Ceylon-buddy/index.html';
+    window.location.href = 'home.html';
 }
 
 // Update nav menu based on login status
@@ -76,52 +73,54 @@ function updateNavMenu() {
 // Initialize auth when DOM is loaded
 document.addEventListener('DOMContentLoaded', updateNavMenu);
 
-// Check if user is logged in
+// Authentication state management
 document.addEventListener('DOMContentLoaded', function() {
-    const userInfo = JSON.parse(localStorage.getItem('ceylonbuddyUser'));
+    // Check if user is logged in
+    const user = JSON.parse(localStorage.getItem('ceylonbuddyUser') || '{"loggedIn": false}');
     
-    // If login-related elements exist on the page
-    const userNameElement = document.querySelector('.user-name');
-    const logoutLinkElement = document.querySelector('.logout-link');
-    const loginLinks = document.querySelectorAll('.login-link');
-    
-    if (userInfo && userInfo.loggedIn) {
-        // Update UI for logged-in user
-        if (userNameElement) {
-            userNameElement.textContent = 'Welcome, ' + userInfo.email;
-            userNameElement.style.display = 'inline-block';
-        }
-        if (logoutLinkElement) {
-            logoutLinkElement.style.display = 'inline-block';
-        }
-        if (loginLinks.length > 0) {
-            loginLinks.forEach(link => {
-                link.style.display = 'none';
-            });
-        }
-    }
-});
-
-// Add event listener to logout links
-document.addEventListener('DOMContentLoaded', function() {
+    // Logout functionality for all logout links
     const logoutLinks = document.querySelectorAll('a[href="logout.php"]');
-    if (logoutLinks.length > 0) {
+    
+    if (logoutLinks) {
         logoutLinks.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // Call server-side logout first
-                fetch('logout.php')
-                    .then(() => {
-                        // Then handle client-side logout
-                        logout();
-                    })
-                    .catch(error => {
-                        console.error('Logout error:', error);
-                        // Still attempt client-side logout even if server request fails
-                        logout();
-                    });
+                // Clear local storage
+                localStorage.removeItem('ceylonbuddyUser');
+                
+                // Redirect to index page
+                window.location.href = 'index.html';
             });
         });
     }
+    
+    // Update UI based on authentication state
+    updateAuthUI(user.loggedIn);
 });
+
+// Update UI elements based on authentication state
+function updateAuthUI(isLoggedIn) {
+    const loginLinks = document.querySelectorAll('.login-link');
+    const logoutLinks = document.querySelectorAll('a[href="logout.php"]');
+    const userNameElements = document.querySelectorAll('.user-name');
+    
+    if (isLoggedIn) {
+        // Hide login links, show user info and logout links
+        loginLinks?.forEach(el => el.style.display = 'none');
+        logoutLinks?.forEach(el => el.style.display = 'inline-block');
+        userNameElements?.forEach(el => {
+            el.style.display = 'inline-block';
+            // If we have the user's name in storage, show it
+            const user = JSON.parse(localStorage.getItem('ceylonbuddyUser'));
+            if (user && user.email) {
+                el.innerHTML = `<i class="fa fa-user me-2"></i>Welcome, ${user.email.split('@')[0]}`;
+            }
+        });
+    } else {
+        // Show login links, hide user info and logout links
+        loginLinks?.forEach(el => el.style.display = 'inline-block');
+        logoutLinks?.forEach(el => el.style.display = 'none');
+        userNameElements?.forEach(el => el.style.display = 'none');
+    }
+}
