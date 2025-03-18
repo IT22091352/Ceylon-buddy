@@ -35,7 +35,12 @@ function getCurrentUser() {
 // Logout function
 function logout() {
     localStorage.removeItem('ceylonbuddyUser');
-    window.location.href = 'home.html';
+    
+    // Also clear session cookie if possible
+    document.cookie = 'PHPSESSID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    
+    // Redirect to index page
+    window.location.href = 'index.html';
 }
 
 // Update nav menu based on login status
@@ -70,11 +75,24 @@ function updateNavMenu() {
     }
 }
 
-// Initialize auth when DOM is loaded
-document.addEventListener('DOMContentLoaded', updateNavMenu);
+// Check access permission
+function checkAccess() {
+    // If not logged in and not on allowed pages, redirect to index
+    if (!isLoggedIn()) {
+        const currentPath = window.location.pathname;
+        const allowedPaths = ['/index.html', '/login.html', '/register.html', '/'];
+        
+        if (!allowedPaths.some(path => currentPath.endsWith(path))) {
+            window.location.href = 'index.html';
+        }
+    }
+}
 
-// Authentication state management
+// Initialize auth when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    updateNavMenu();
+    checkAccess();
+    
     // Check if user is logged in
     const user = JSON.parse(localStorage.getItem('ceylonbuddyUser') || '{"loggedIn": false}');
     

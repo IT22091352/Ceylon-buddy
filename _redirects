@@ -1,4 +1,15 @@
-/*    /home.html   200
+# Protected routes - check authentication first
+/home.html /js/check-auth.js 200
+/about.html /js/check-auth.js 200
+/services.html /js/check-auth.js 200
+/gallery.html /js/check-auth.js 200
+/contact.html /js/check-auth.js 200
+/packages.html /js/check-auth.js 200
+/places/* /js/check-auth.js 200
+
+# Fallback
+/* /index.html 200
+
 /login.php    /login.html    301
 /register.php    /register.html    301
 /index.php    /home.html    301

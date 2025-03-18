@@ -134,11 +134,12 @@
             const user = validUsers.find(user => user.email === email && user.password === password);
             
             if (user) {
-                // Store login state in localStorage (for demo only)
+                // Store login state in localStorage with more secure data
                 localStorage.setItem('ceylonbuddyUser', JSON.stringify({
                     email: user.email,
                     loggedIn: true,
-                    loginTime: new Date().toString()
+                    loginTime: new Date().toString(),
+                    token: btoa(user.email + ':' + new Date().getTime()) // Simple token
                 }));
                 
                 // Redirect to home page instead of index.html

@@ -20,3 +20,67 @@
   from = "/*"
   to = "/home.html"
   status = 200
+
+[[redirects]]
+  from = "/home.html"
+  to = "/js/checkAuth.js"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/js/checkAuth.js"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/services.html"
+  to = "/js/checkAuth.js"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/gallery.html"
+  to = "/js/checkAuth.js"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/js/checkAuth.js"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/packages.html"
+  to = "/js/checkAuth.js"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/places/*"
+  to = "/js/checkAuth.js"
+  status = 200
+  force = true
+
+# Keep these pages accessible
+[[redirects]]
+  from = "/index.html"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/login.html"
+  to = "/login.html"
+  status = 200
+
+[[redirects]]
+  from = "/register.html"
+  to = "/register.html"
+  status = 200
+
+# Default fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
