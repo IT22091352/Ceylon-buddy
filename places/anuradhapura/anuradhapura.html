@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuradhapura - The Timeless Sacred City of Sri Lanka</title>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="../../../../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="../../../../../lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="../../css/style.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/places/anuradhapura/assets/header.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            position: relative;
+        }
+        
+        .header-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        
+        .header-content p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        section {
+            margin-bottom: 60px;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: #2a6041;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #2a6041;
+            padding-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .importance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .importance-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .importance-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .importance-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .importance-item-content {
+            padding: 20px;
+        }
+        
+        .importance-item h3 {
+            color: #2a6041;
+            margin-bottom: 10px;
+        }
+        
+        .tourist-info {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .tourist-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .tourist-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .tourist-text ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .tourist-text li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .attraction-item {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .attraction-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .attraction-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .attraction-item-content {
+            padding: 20px;
+        }
+        
+        .attraction-item h3 {
+            color: #2a6041;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background-color: #2a6041;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #2a6041;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top:hover {
+            background-color: #1e4930;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header-content p {
+                font-size: 1.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .tourist-info {
+                flex-direction: column;
+            }
+            
+            .tourist-image {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="background-image: url('http://localhost/Ceylon-buddy/places/anuradhapura/assets/header.jpg');">
+    <div class="header-content">
+        <h1>Anuradhapura – The Timeless Sacred City</h1>
+        <p>Sri Lanka's First Ancient Capital and UNESCO World Heritage Site</p>
+    </div>
+</header>
+
+    
+    
+    <div class="container">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Anuradhapura, the first ancient capital of Sri Lanka, is a city of immense historical, cultural, and religious significance. Recognized as a UNESCO World Heritage Site, it was the political and spiritual heart of Sri Lanka for over 1,300 years (from the 4th century BC to the 11th century AD). Today, it stands as a remarkable testament to the grandeur of ancient Sinhalese civilization, attracting thousands of pilgrims and history enthusiasts from around the world.</p>
+            <div style="width: 100%; height: 400px; background-image: url('http://localhost/Ceylon-buddy/places/anuradhapura/assets/overview.jpg'); background-size: cover; background-position: center; border-radius: 8px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);"></div>
+        </section>
+        
+        <section id="history">
+            <h2>History – When, How, and Who Built Anuradhapura?</h2>
+            <p>Anuradhapura was established in the 4th century BC by King Pandukabhaya, who made it the first capital of Sri Lanka. The city flourished under successive monarchs, with remarkable irrigation systems, colossal stupas, and sacred Buddhist temples being constructed.</p>
+            <p>The arrival of Buddhism in the 3rd century BC, brought by Arahat Mahinda (son of Emperor Ashoka of India), transformed Anuradhapura into a major center of Buddhist learning and worship. Kings like Dutugemunu, Valagamba, and Mahasena contributed to the city's architectural brilliance by constructing massive stupas, reservoirs, and monastic complexes.</p>
+            <p>Despite its prosperity, Anuradhapura faced repeated invasions from South Indian kingdoms, leading to its decline in the 11th century AD, when the capital was moved to Polonnaruwa. However, it remained a sacred pilgrimage site and continues to be revered by Buddhists worldwide.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 30px;">
+                <div style="flex: 1; min-width: 300px; height: 250px; background-image: url('http://localhost/Ceylon-buddy/places/anuradhapura/assets/history1.jpg'); background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></div>
+                <div style="flex: 1; min-width: 300px; height: 250px; background-image: url('http://localhost/Ceylon-buddy/places/anuradhapura/assets/history2.jpg'); background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></div>
+            </div>
+        </section>
+        
+        <section id="importance">
+            <h2>Importance of Anuradhapura</h2>
+            <div class="importance-grid">
+                <div class="importance-item">
+                    <img src="http://localhost/Ceylon-buddy/places/anuradhapura/assets/bodhi-tree.jpg" alt="Sri Maha Bodhi Tree">
+                    <div class="importance-item-content">
+                        <h3>1. Religious Significance</h3>
+                        <p>Home to the Sri Maha Bodhi Tree, the oldest recorded tree in the world, grown from a sapling of the original Bodhi tree under which the Buddha attained enlightenment.</p>
+                    </div>
+                </div>
+                
+                <div class="importance-item">
+                    <img src="http://localhost/Ceylon-buddy/places/anuradhapura/assets/stupas.jpg" alt="Ancient Stupas">
+                    <div class="importance-item-content">
+                        <h3>2. Architectural Marvels</h3>
+                        <p>Boasts some of the largest stupas in the world, including Ruwanwelisaya, Jetavanaramaya, and Abhayagiriya, showcasing ancient engineering excellence.</p>
+                    </div>
+                </div>
+                
+                <div class="importance-item">
+                    <img src="http://localhost/Ceylon-buddy/places/anuradhapura/assets/irrigation.jpg" alt="Irrigation Systems">
+                    <div class="importance-item-content">
+                        <h3>3. Advanced Irrigation Systems</h3>
+                        <p>Features ancient reservoirs like Tissa Wewa and Nuwara Wewa, demonstrating sophisticated hydraulic technology that sustained the kingdom.</p>
+                    </div>
+                </div>
+                
+                <div class="importance-item">
+                    <img src="http://localhost/Ceylon-buddy/places/anuradhapura/assets/culture.jpg" alt="Cultural Heritage">
+                    <div class="importance-item-content">
+                        <h3>4. Cultural Heritage</h3>
+                        <p>Anuradhapura was a hub for Buddhist scholars, monks, and artists, influencing the region's culture and spirituality for centuries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="attractions">
+            <h2>Major Attractions in Anuradhapura</h2>
+            <div class="attractions-grid">
+                <div class="attraction-item">
+                    <img src="http://localhost/Ceylon-buddy/places/anuradhapura/assets/sri-maha-bodhi.jpg" alt="Sri Maha Bodhi">
+                    <div class="attraction-item-content">
+                        <h3>Sri Maha Bodhi</h3>
+                        <p>The sacred Bo tree, over 2,300 years old, is the most important pilgrimage site in Anuradhapura.</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-item">
+                    <img src="http://localhost/Ceylon-buddy/places/anuradhapura/assets/ruwanwelisaya.jpg" alt="Ruwanwelisaya Stupa">
+                    <div class="attraction-item-content">
+                        <h3>Ruwanwelisaya Stupa</h3>
+                        <p>One of the largest and most revered stupas in Sri Lanka, built by King Dutugemunu in the 2nd century BC.</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-item">
+                    <img src="http://localhost/Ceylon-buddy/places/anuradhapura/assets/jetavanaramaya.jpg" alt="Jetavanaramaya Stupa">
+                    <div class="attraction-item-content">
+                        <h3>Jetavanaramaya Stupa</h3>
+                        <p>Once the third-tallest structure in the ancient world, it was a major Buddhist monastery and meditation center.</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-item">
+                    <img src="http://localhost/Ceylon-buddy/places/anuradhapura/assets/abhayagiriya.jpg" alt="Abhayagiriya Monastery">
+                    <div class="attraction-item-content">
+                        <h3>Abhayagiriya Monastery</h3>
+                        <p>A vast monastic complex that was a center for Buddhist learning and international scholars.</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-item">
+                    <img src="http://localhost/Ceylon-buddy/places/anuradhapura/assets/thuparamaya.jpg" alt="Thuparamaya Stupa">
+                    <div class="attraction-item-content">
+                        <h3>Thuparamaya Stupa</h3>
+                        <p>The first Buddhist stupa built in Sri Lanka, enshrining the Buddha's collarbone relic.</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-item">
+                    <img src="http://localhost/Ceylon-buddy/places/anuradhapura/assets/isurumuniya.jpg" alt="Isurumuniya Temple">
+                    <div class="attraction-item-content">
+                        <h3>Isurumuniya Temple</h3>
+                        <p>A rock temple famous for its intricate stone carvings, including the Isurumuniya Lovers sculpture.</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-item">
+                    <img src="http://localhost/Ceylon-buddy/places/anuradhapura/assets/samadhi-buddha.jpg" alt="Samadhi Buddha Statue">
+                    <div class="attraction-item-content">
+                        <h3>Samadhi Buddha Statue</h3>
+                        <p>A stunning 4th-century AD stone sculpture depicting the Buddha in deep meditation.</p>
+                    </div>
+                </div>
+                
+                <div class="attraction-item">
+                    <img src="http://localhost/Ceylon-buddy/places/anuradhapura/assets/kuttam-pokuna.jpg" alt="Kuttam Pokuna">
+                    <div class="attraction-item-content">
+                        <h3>Kuttam Pokuna (Twin Ponds)</h3>
+                        <p>Ancient bathing pools that showcase the advanced water management system of Anuradhapura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tourist-attraction">
+            <h2>Anuradhapura as a Tourist Destination</h2>
+            <div class="tourist-info">
+                <div class="tourist-image" style="background-image: url('http://localhost/Ceylon-buddy/places/anuradhapura/assets/img1.jpg');"></div>
+                <div class="tourist-text">
+                    <p>Anuradhapura is a must-visit for history lovers, pilgrims, and cultural explorers. Visitors can:</p>
+                    <ul>
+                        <li>Walk through ancient ruins that span over 1,000 years of history</li>
+                        <li>Participate in Buddhist ceremonies at the Sri Maha Bodhi Tree</li>
+                        <li>Marvel at the engineering feats of ancient Sinhalese civilization</li>
+                        <li>Visit the Archaeological Museum to see recovered artifacts</li>
+                        <li>Explore the interconnected monasteries and ancient city planning</li>
+                        <li>Observe the remarkable astronomical precision in ancient structures</li>
+                    </ul>
+                    <p>The Sacred City is open daily from sunrise to sunset, with the Anuradhapura Archaeological Museum operating from 9 AM to 5 PM.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Anuradhapura is more than just an archaeological site; it is a living heritage city that continues to inspire with its spiritual aura, architectural brilliance, and ancient wisdom. Whether you're a history enthusiast, a photographer, or a seeker of peace, a visit to Anuradhapura offers an unforgettable journey into Sri Lanka's glorious past.</p>
+            <div style="width: 100%; height: 300px; background-image: url('http://localhost/Ceylon-buddy/places/anuradhapura/assets/conclusion.jpg'); background-size: cover; background-position: center; border-radius: 8px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);"></div>
+        </section>
+    </div>
+    
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5">
+        <div class="container py-5">
+          <div class="row g-5">
+            <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="footer-item d-flex flex-column">
+                <h4 class="mb-4 text-white">Get In Touch</h4>
+                <a href=""
+                  ><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a
+                >
+                <a href=""
+                  ><i class="fas fa-envelope me-2"></i> info@example.com</a
+                >
+                <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                <a href="" class="mb-3"
+                  ><i class="fas fa-print me-2"></i> +012 345 67890</a
+                >
+                <div class="d-flex align-items-center">
+                  <i class="fas fa-share fa-2x text-white me-2"></i>
+                  <a
+                    class="btn-square btn btn-primary rounded-circle mx-1"
+                    href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a
+                    class="btn-square btn btn-primary rounded-circle mx-1"
+                    href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a
+                    class="btn-square btn btn-primary rounded-circle mx-1"
+                    href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    class="btn-square btn btn-primary rounded-circle mx-1"
+                    href=""
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="footer-item d-flex flex-column">
+                <h4 class="mb-4 text-white">Company</h4>
+                <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
+                <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
+                <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
+                <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
+                <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
+                <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="footer-item d-flex flex-column">
+                <h4 class="mb-4 text-white">Support</h4>
+                <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
+                <a href=""
+                  ><i class="fas fa-angle-right me-2"></i> Legal Notice</a
+                >
+                <a href=""
+                  ><i class="fas fa-angle-right me-2"></i> Privacy Policy</a
+                >
+                <a href=""
+                  ><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a
+                >
+                <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
+                <a href=""
+                  ><i class="fas fa-angle-right me-2"></i> Cookie policy</a
+                >
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-3">
+              <div class="footer-item">
+                <div class="row gy-3 gx-2 mb-4">
+                  <div class="col-xl-6">
+                    <form>
+                      <div class="form-floating">
+                        <select class="form-select bg-dark border" id="select1">
+                          <option value="1">Arabic</option>
+                          <option value="2">German</option>
+                          <option value="3">Greek</option>
+                          <option value="3">New York</option>
+                        </select>
+                        <label for="select1">English</label>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-xl-6">
+                    <form>
+                      <div class="form-floating">
+                        <select class="form-select bg-dark border" id="select1">
+                          <option value="1">USD</option>
+                          <option value="2">EUR</option>
+                          <option value="3">INR</option>
+                          <option value="3">GBP</option>
+                        </select>
+                        <label for="select1">$</label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <h4 class="text-white mb-3">Payments</h4>
+                <div class="footer-bank-card">
+                  <a href="#" class="text-white me-2"
+                    ><i class="fab fa-cc-amex fa-2x"></i
+                  ></a>
+                  <a href="#" class="text-white me-2"
+                    ><i class="fab fa-cc-visa fa-2x"></i
+                  ></a>
+                  <a href="#" class="text-white me-2"
+                    ><i class="fas fa-credit-card fa-2x"></i
+                  ></a>
+                  <a href="#" class="text-white me-2"
+                    ><i class="fab fa-cc-mastercard fa-2x"></i
+                  ></a>
+                  <a href="#" class="text-white me-2"
+                    ><i class="fab fa-cc-paypal fa-2x"></i
+                  ></a>
+                  <a href="#" class="text-white"
+                    ><i class="fab fa-cc-discover fa-2x"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+    
+    <div class="scroll-top" id="scrollTop">↑</div>
+    
+    <script>
+        // JavaScript for scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Image hover effect for items
+        const itemsWithImages = document.querySelectorAll('.importance-item, .attraction-item');
+        
+        itemsWithImages.forEach(item => {
+            const img = item.querySelector('img');
+            
+            item.addEventListener('mouseenter', function() {
+                img.style.transform = 'scale(1.05)';
+                img.style.transition = 'transform 0.5s ease';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                img.style.transform = 'scale(1)';
+            });
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
