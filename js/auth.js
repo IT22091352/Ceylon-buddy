@@ -34,6 +34,7 @@ function getCurrentUser() {
 
 // Logout function
 function logout() {
+    // Clear localStorage
     localStorage.removeItem('ceylonbuddyUser');
     
     // Also clear session cookie if possible
@@ -56,7 +57,12 @@ function updateNavMenu() {
     
     logoutElements.forEach(el => {
         el.style.display = loggedIn ? 'inline-block' : 'none';
-        el.addEventListener('click', (e) => {
+        // Remove any existing event listeners
+        const newEl = el.cloneNode(true);
+        el.parentNode.replaceChild(newEl, el);
+        
+        // Add click event listener for logout
+        newEl.addEventListener('click', (e) => {
             e.preventDefault();
             logout();
         });
@@ -65,7 +71,7 @@ function updateNavMenu() {
     if (loggedIn) {
         const user = getCurrentUser();
         userNameElements.forEach(el => {
-            el.textContent = user.email;
+            el.textContent = user.email ? `Welcome, ${user.email.split('@')[0]}` : 'Welcome, User';
             el.style.display = 'inline-block';
         });
     } else {
@@ -97,18 +103,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const user = JSON.parse(localStorage.getItem('ceylonbuddyUser') || '{"loggedIn": false}');
     
     // Logout functionality for all logout links
-    const logoutLinks = document.querySelectorAll('a[href="logout.php"]');
+    const logoutLinks = document.querySelectorAll('.logout-link, a[href="logout.php"]');
     
     if (logoutLinks) {
         logoutLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
+            // Remove any existing event listeners
+            const newLink = link.cloneNode(true);
+            link.parentNode.replaceChild(newLink, link);
+            
+            // Add new event listener
+            newLink.addEventListener('click', function(e) {
                 e.preventDefault();
-                
-                // Clear local storage
-                localStorage.removeItem('ceylonbuddyUser');
-                
-                // Redirect to index page
-                window.location.href = 'index.html';
+                logout();
             });
         });
     }
@@ -120,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Update UI elements based on authentication state
 function updateAuthUI(isLoggedIn) {
     const loginLinks = document.querySelectorAll('.login-link');
-    const logoutLinks = document.querySelectorAll('a[href="logout.php"]');
+    const logoutLinks = document.querySelectorAll('.logout-link, a[href="logout.php"]');
     const userNameElements = document.querySelectorAll('.user-name');
     
     if (isLoggedIn) {
