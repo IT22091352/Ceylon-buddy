@@ -35,7 +35,7 @@ function getCurrentUser() {
 // Logout function
 function logout() {
     localStorage.removeItem('ceylonbuddyUser');
-    window.location.href = 'index.html';
+    window.location.href = 'home.html';
 }
 
 // Update nav menu based on login status
