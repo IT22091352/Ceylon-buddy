@@ -70,22 +70,15 @@
                       ></a>
                     </div>
                   </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a href="#"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Register</small></a>
-                        <a href="#"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Login</small></a>
-                        <div class="dropdown">
-                            <a href="#" class="dropdown-toggle text-light" data-bs-toggle="dropdown"><small><i class="fa fa-home me-2"></i> My Dashboard</small></a>
-                            <div class="dropdown-menu rounded">
-                                <a href="#" class="dropdown-item"><i class="fas fa-user-alt me-2"></i> My Profile</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-comment-alt me-2"></i> Inbox</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-bell me-2"></i> Notifications</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-cog me-2"></i> Account Settings</a>
-                                <a href="#" class="dropdown-item"><i class="fas fa-power-off me-2"></i> Log Out</a>
-                            </div>
-                        </div>
+                  <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center" style="height: 45px">
+                      <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="#" class="me-3 text-light"><i class="fa fa-user me-2"></i>Welcome, <?php echo $_SESSION['user_name']; ?></a>
+                        <a href="logout.php" class="me-3 text-light"><i class="fa fa-sign-out-alt me-2"></i>Logout</a>
+                      <?php else: ?>
+                      <?php endif; ?>
                     </div>
-                </div>
+                  </div>
             </div>
         </div>
         <!-- Topbar End -->
@@ -121,7 +114,7 @@
                         </div> -->
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="/home.html#booking" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a>               </div>
+                    <a href="home.html#booking" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a>               </div>
             </nav>
         </div>
         <!-- Navbar & Hero End -->
@@ -150,7 +143,7 @@
                     </div>
                     <div class="col-lg-7" style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(img/about-img-1.png);">
                         <h5 class="section-about-title pe-3">About Us</h5>
-                        <h1 class="mb-4">Welcome to <span class="text-primary">Travela</span></h1>
+                        <h1 class="mb-4">Welcome to <span class="text-primary">Ceylon buddy</span></h1>
                         <p class="mb-4">At Ceylon Buddy, we are passionate about showcasing the breathtaking beauty, rich heritage, and warm hospitality of Sri Lanka. Our mission is to inspire travelers from around the world to explore this tropical paradise, where every journey is a story waiting to be told.
 
                             From sun-kissed beaches and misty mountains to ancient ruins and vibrant festivals, Sri Lanka is a land of wonders. Whether you seek adventure, cultural immersion, relaxation, or wildlife encounters, our platform is designed to help you discover the best experiences the island has to offer.
