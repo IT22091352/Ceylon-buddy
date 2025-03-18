@@ -1,3 +1,4 @@
-/*    /index.html   200
+/*    /home.html   200
 /login.php    /login.html    301
 /register.php    /register.html    301
+/index.php    /home.html    301

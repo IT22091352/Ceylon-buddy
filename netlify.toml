@@ -12,6 +12,11 @@
   status = 301
   
 [[redirects]]
+  from = "/index.php"
+  to = "/home.html"
+  status = 301
+  
+[[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/home.html"
   status = 200
