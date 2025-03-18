@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - Ceylon Buddy</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body {
@@ -103,9 +103,10 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form id="login-form" action="login.php" method="POST">
-            <input type="email" name="email" id="email" placeholder="Email" required>
-            <input type="password" name="password" id="password" placeholder="Password" required>
+        <form id="login-form">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <div id="error-message" style="color: red; margin-bottom: 15px; display: none;"></div>
             <button type="submit">Login</button>
         </form>
         <div class="footer">
@@ -114,24 +115,37 @@
     </div>
 
     <script>
-        // Add form validation and other interactive features
-        document.getElementById('login-form').addEventListener('submit', function (e) {
+        // Simple client-side authentication for demo purposes
+        // In a production environment, you should use a secure backend service
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
-
-            // Basic validation for email format
-            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (!emailPattern.test(email)) {
-                alert('Please enter a valid email address.');
-                e.preventDefault();
-                return;
-            }
-
-            // Basic validation for password length
-            if (password.length < 6) {
-                alert('Password must be at least 6 characters long.');
-                e.preventDefault();
-                return;
+            const errorMessage = document.getElementById('error-message');
+            
+            // Demo credentials - in a real app, you would verify against a secure backend
+            const validUsers = [
+                { email: 'admin@ceylonbuddy.com', password: 'admin123' },
+                { email: 'user@example.com', password: 'user123' }
+            ];
+            
+            // Basic validation
+            const user = validUsers.find(user => user.email === email && user.password === password);
+            
+            if (user) {
+                // Store login state in localStorage (for demo only)
+                localStorage.setItem('ceylonbuddyUser', JSON.stringify({
+                    email: user.email,
+                    loggedIn: true,
+                    loginTime: new Date().toString()
+                }));
+                
+                // Redirect to home page
+                window.location.href = 'index.html';
+            } else {
+                errorMessage.textContent = 'Invalid email or password. Try admin@ceylonbuddy.com / admin123';
+                errorMessage.style.display = 'block';
             }
         });
     </script>

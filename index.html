@@ -77,7 +77,7 @@
               ><i class="fab fa-tiktok fw-normal"></i
             ></a>
             <a
-              class="btn btn-sm btn-outline-light btn-sm-square rounded-circle"
+              class="btn btn-sm btn-outline-light btn-sm-square"
               href="https://youtube.com/@pearl_ofparadise?si=u1FCQwY4iDU4BwwD"
               ><i class="fab fa-youtube fw-normal"></i
             ></a>
@@ -85,11 +85,10 @@
         </div>
         <div class="col-lg-4 text-center text-lg-end">
           <div class="d-inline-flex align-items-center" style="height: 45px">
-            <?php if (isset($_SESSION['user_id'])): ?>
-            <?php else: ?>
-              <a href="register.html" class="me-3 text-light"><i class="fa fa-user me-2"></i>Register</a>
-              <a href="login.html" class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Login</a>
-            <?php endif; ?>
+            <a href="register.html" class="me-3 text-light login-link"><i class="fa fa-user me-2"></i>Register</a>
+            <a href="login.html" class="me-3 text-light login-link"><i class="fa fa-sign-in-alt me-2"></i>Login</a>
+            <a href="#" class="me-3 text-light user-name" style="display: none;"><i class="fa fa-user me-2"></i>Welcome</a>
+            <a href="#" class="me-3 text-light logout-link" style="display: none;"><i class="fa fa-sign-out-alt me-2"></i>Logout</a>
           </div>
         </div>
       </div>
@@ -997,5 +996,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
   </body>
 </html>

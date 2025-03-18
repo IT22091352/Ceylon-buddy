@@ -1,0 +1,17 @@
+[build]
+  publish = "."
+  
+[[redirects]]
+  from = "/login.php"
+  to = "/login.html"
+  status = 301
+  
+[[redirects]]
+  from = "/register.php"
+  to = "/register.html"
+  status = 301
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
