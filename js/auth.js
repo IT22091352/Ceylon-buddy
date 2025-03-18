@@ -34,8 +34,11 @@ function getCurrentUser() {
 
 // Logout function
 function logout() {
+    // Clear localStorage
     localStorage.removeItem('ceylonbuddyUser');
-    window.location.href = 'home.html';
+    
+    // Redirect to index page
+    window.location.href = '/Ceylon-buddy/index.html';
 }
 
 // Update nav menu based on login status
@@ -72,3 +75,53 @@ function updateNavMenu() {
 
 // Initialize auth when DOM is loaded
 document.addEventListener('DOMContentLoaded', updateNavMenu);
+
+// Check if user is logged in
+document.addEventListener('DOMContentLoaded', function() {
+    const userInfo = JSON.parse(localStorage.getItem('ceylonbuddyUser'));
+    
+    // If login-related elements exist on the page
+    const userNameElement = document.querySelector('.user-name');
+    const logoutLinkElement = document.querySelector('.logout-link');
+    const loginLinks = document.querySelectorAll('.login-link');
+    
+    if (userInfo && userInfo.loggedIn) {
+        // Update UI for logged-in user
+        if (userNameElement) {
+            userNameElement.textContent = 'Welcome, ' + userInfo.email;
+            userNameElement.style.display = 'inline-block';
+        }
+        if (logoutLinkElement) {
+            logoutLinkElement.style.display = 'inline-block';
+        }
+        if (loginLinks.length > 0) {
+            loginLinks.forEach(link => {
+                link.style.display = 'none';
+            });
+        }
+    }
+});
+
+// Add event listener to logout links
+document.addEventListener('DOMContentLoaded', function() {
+    const logoutLinks = document.querySelectorAll('a[href="logout.php"]');
+    if (logoutLinks.length > 0) {
+        logoutLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Call server-side logout first
+                fetch('logout.php')
+                    .then(() => {
+                        // Then handle client-side logout
+                        logout();
+                    })
+                    .catch(error => {
+                        console.error('Logout error:', error);
+                        // Still attempt client-side logout even if server request fails
+                        logout();
+                    });
+            });
+        });
+    }
+});
