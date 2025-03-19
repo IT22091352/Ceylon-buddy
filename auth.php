@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -14,15 +15,8 @@ if (!isAuthenticated()) {
     // Skip redirection for these allowed pages
     $allowed_pages = array(
         '/index.html',
-        '/index.php',
         '/login.html',
-        '/login.php',
-        '/register.html',
-        '/register.php',
-        '/css/',
-        '/js/',
-        '/lib/',
-        '/img/'
+        '/register.html'
     );
     
     // Check if the current URL is allowed

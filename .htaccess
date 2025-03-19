@@ -1,37 +1,20 @@
-# Require PHP authentication for protected pages
-<FilesMatch "\.(html|php)$">
-  # Exclude these files from authentication
-  <FilesMatch "(index\.html|login\.html|register\.html|login\.php|register\.php)$">
-    # Allow access to these files
-    Satisfy Any
-    Allow from all
-  </FilesMatch>
-  
-  # Include authentication for all other matched files
-  <FilesMatch "^((?!(index|login|register)).)*$">
-    RewriteEngine On
-    RewriteRule .* - [E=AUTHENTICATE:1]
-  </FilesMatch>
-</FilesMatch>
-
-# PHP handling
+// filepath: c:\xampp\htdocs\Ceylon-buddy\.htaccess
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  
-  # Skip for allowed files
-  RewriteCond %{REQUEST_URI} !^/index\.html$ [NC]
-  RewriteCond %{REQUEST_URI} !^/login\.html$ [NC]
-  RewriteCond %{REQUEST_URI} !^/register\.html$ [NC]
-  RewriteCond %{REQUEST_URI} !^/login\.php$ [NC]
-  RewriteCond %{REQUEST_URI} !^/register\.php$ [NC]
-  RewriteCond %{REQUEST_URI} !^/css/ [NC]
-  RewriteCond %{REQUEST_URI} !^/js/ [NC]
-  RewriteCond %{REQUEST_URI} !^/lib/ [NC]
-  RewriteCond %{REQUEST_URI} !^/img/ [NC]
-  
-  # Only apply to HTML and PHP files
-  RewriteCond %{REQUEST_URI} \.(html|php)$ [NC]
-  
-  # Redirect to authentication check
-  RewriteRule ^ auth.php [L]
+    RewriteEngine On
+
+    # Skip for allowed files
+    RewriteCond %{REQUEST_URI} !^/index\.html$ [NC]
+    RewriteCond %{REQUEST_URI} !^/login\.html$ [NC]
+    RewriteCond %{REQUEST_URI} !^/register\.html$ [NC]
+    RewriteCond %{REQUEST_URI} !^/auth\.php$ [NC]
+    RewriteCond %{REQUEST_URI} !^/css/ [NC]
+    RewriteCond %{REQUEST_URI} !^/js/ [NC]
+    RewriteCond %{REQUEST_URI} !^/lib/ [NC]
+    RewriteCond %{REQUEST_URI} !^/img/ [NC]
+
+    # Only apply to HTML files
+    RewriteCond %{REQUEST_URI} \.html$ [NC]
+
+    # Redirect to authentication check
+    RewriteRule ^ auth.php [L]
 </IfModule>
