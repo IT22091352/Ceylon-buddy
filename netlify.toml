@@ -1,21 +1,23 @@
+// filepath: c:\xampp\htdocs\Ceylon-buddy\netlify.toml
 [build]
-  publish = "."
-  
+  publish = "public"
+  command = "composer install && npm install && npm run build"
+
 [[redirects]]
   from = "/login.php"
   to = "/login.html"
   status = 301
-  
+
 [[redirects]]
   from = "/register.php"
   to = "/register.html"
   status = 301
-  
+
 [[redirects]]
   from = "/index.php"
   to = "/home.html"
   status = 301
-  
+
 [[redirects]]
   from = "/*"
   to = "/home.html"
