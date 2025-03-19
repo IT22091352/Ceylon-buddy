@@ -103,53 +103,15 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form id="login-form">
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <div id="error-message" style="color: red; margin-bottom: 15px; display: none;"></div>
-            <button type="submit">Login</button>
+        <form method="POST" action="login.php" style="max-width: 300px; margin: auto; padding: 1em; border: 1px solid #ccc; border-radius: 1em;">
+            <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 0.5em; margin: 0.5em 0;"><br>
+            <input type="password" name="password" placeholder="Password" required style="width: 100%; padding: 0.5em; margin: 0.5em 0;"><br>
+            <button type="submit" style="width: 100%; padding: 0.7em; background-color: #4CAF50; color: white; border: none; border-radius: 0.3em;">Login</button>
         </form>
         <div class="footer">
             <p>Don't have an account? <a href="register.html">Register</a></p>
         </div>
     </div>
-
-    <script>
-        // Simple client-side authentication for demo purposes
-        // In a production environment, you should use a secure backend service
-        document.getElementById('login-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const errorMessage = document.getElementById('error-message');
-            
-            // Demo credentials - in a real app, you would verify against a secure backend
-            const validUsers = [
-                { email: 'admin@ceylonbuddy.com', password: 'admin123' },
-                { email: 'user@example.com', password: 'user123' }
-            ];
-            
-            // Basic validation
-            const user = validUsers.find(user => user.email === email && user.password === password);
-            
-            if (user) {
-                // Store login state in localStorage with more secure data
-                localStorage.setItem('ceylonbuddyUser', JSON.stringify({
-                    email: user.email,
-                    loggedIn: true,
-                    loginTime: new Date().toString(),
-                    token: btoa(user.email + ':' + new Date().getTime()) // Simple token
-                }));
-                
-                // Redirect to home page instead of index.html
-                window.location.href = 'home.html';
-            } else {
-                errorMessage.textContent = 'Invalid email or password. Try admin@ceylonbuddy.com / admin123';
-                errorMessage.style.display = 'block';
-            }
-        });
-    </script>
 </body>
 
 </html>

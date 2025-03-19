@@ -7,15 +7,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Prepare SQL query to fetch user data
-    $sql = "SELECT * FROM users WHERE email = ?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$email]);
-    $user = $stmt->fetch();
+    // Fetch user data from MongoDB
+    $user = $collection->findOne(['email' => $email]);
 
     // Check if the email exists and password matches
     if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['user_id'] = $user['id']; // Store user ID in session
+        $_SESSION['user_id'] = (string) $user['_id']; // Store user ID in session
+        $_SESSION['user_name'] = $user['name']; // Store user name in session
         header('Location: home.html'); // Redirect to home page
         exit();
     } else {

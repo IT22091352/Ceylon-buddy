@@ -1,13 +1,9 @@
 <?php
-$host = 'localhost'; // Database host
-$dbname = 'tourism_website'; // Database name
-$username = 'root'; // Database username (default for local is usually root)
-$password = ''; // Database password (leave empty for local development)
+require 'vendor/autoload.php'; // Include Composer's autoloader
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
-}
+$mongoUrl = "mongodb+srv://CeylonBunddyAdmin:w3JhohdJKGLhraKZ@ceylon-buddy.yslsv.mongodb.net/"; // Replace with your MongoDB URL
+$client = new MongoDB\Client($mongoUrl);
+$collection = $client->tourism_website->users;
 ?>
+
+
