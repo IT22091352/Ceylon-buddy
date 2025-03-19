@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "composer install && npm install && npm run build"
+  command = "composer install --ignore-platform-req=ext-mongodb && npm install && npm run build"
 
 [[redirects]]
   from = "/login.php"
