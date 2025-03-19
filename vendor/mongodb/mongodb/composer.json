@@ -10,7 +10,7 @@
         { "name": "Jérôme Tamarelle", "email": "jerome.tamarelle@mongodb.com" }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.2",
         "ext-mongodb": "^1.21.0",
         "composer-runtime-api": "^2.0",
         "psr/log": "^1.1.4|^2|^3"
