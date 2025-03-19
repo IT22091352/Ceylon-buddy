@@ -1,4 +1,3 @@
-// filepath: c:\xampp\htdocs\Ceylon-buddy\netlify.toml
 [build]
   publish = "public"
   command = "composer install && npm install && npm run build"
