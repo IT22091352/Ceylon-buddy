@@ -10,6 +10,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Fetch user data from MongoDB
     $user = $collection->findOne(['email' => $email]);
 
+    // Debugging information
+    if ($user) {
+        echo "User found: " . json_encode($user) . "<br>";
+    } else {
+        echo "User not found<br>";
+    }
+
     // Check if the email exists and password matches
     if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = (string) $user['_id']; // Store user ID in session
