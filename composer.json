@@ -1,6 +1,12 @@
 {
     "require": {
-        "mongodb/mongodb":  "^1.21.1",
+        "mongodb/mongodb": "^1.21.1",
         "ext-mongodb": "*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "pecl install mongodb",
+            "echo 'extension=mongodb.so' >> /opt/buildhome/.php/php.ini"
+        ]
     }
 }
