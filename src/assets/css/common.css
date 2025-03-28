@@ -1,0 +1,193 @@
+/* Common Components Styling */
+:root {
+  --primary: #1e88e5;
+  --primary-light: #6ab7ff;
+  --primary-dark: #005cb2;
+  --secondary: #26a69a;
+  --accent: #ff6f00;
+  --dark: #263238;
+  --light: #f5f7fa;
+  --gray: #607d8b;
+  --light-gray: #eceff1;
+  --success: #4caf50;
+  --danger: #f44336;
+  --section-padding: 5rem 0;
+  
+  /* New professional colors */
+  --deep-blue: #0a3d62;
+  --teal: #0a9396;
+  --coral: #e76f51;
+  --sand: #f4a261;
+  --leaf: #2a9d8f;
+  --cream: #f8f9fa;
+  --charcoal: #212529;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: var(--charcoal);
+  background-color: var(--cream);
+  overflow-x: hidden;
+}
+
+/* Common Section Styles */
+.section-header {
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-subtitle:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: var(--teal);
+  bottom: -8px;
+  left: 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--deep-blue);
+  margin-bottom: 1.5rem;
+}
+
+.section-description {
+  color: var(--gray);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+/* Button Styles */
+.custom-btn {
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.custom-btn:hover:before {
+  width: 100%;
+}
+
+.custom-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+  background-color: var(--deep-blue);
+  border-color: var(--deep-blue);
+}
+
+.btn-secondary {
+  background-color: var(--teal);
+  border-color: var(--teal);
+}
+
+.btn-accent {
+  background-color: var(--coral);
+  border-color: var(--coral);
+  color: white;
+}
+
+/* Card Styles */
+.custom-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+/* Responsive Utilities */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .custom-btn {
+    padding: 10px 25px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
