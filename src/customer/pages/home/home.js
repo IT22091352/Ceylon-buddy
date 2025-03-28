@@ -254,7 +254,7 @@ function Home() {
           size="lg"
           className="find-guide-btn px-8 py-3 rounded-full font-semibold text-lg shadow-lg bg-gradient-to-r from-emerald-600 to-teal-500 border-0 hover:shadow-xl transition-all"
         >
-          <i className="fas fa-user-tie me-2"></i> Find Tour Guider
+          <i className="fas fa-user-tie me-2"></i> Find Tour Guiders
         </Button>
       </div>
     </div>
