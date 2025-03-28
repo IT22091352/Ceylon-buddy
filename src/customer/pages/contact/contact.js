@@ -56,7 +56,7 @@ function Contact() {
     
     // Prepare template parameters for EmailJS
     const templateParams = {
-      to_email: 'chathukadilakshana33@gmail.com',
+      to_email: 'ceylonbuddytour@gmail.com',
       from_name: formData.name,
       from_email: formData.email,
       phone: formData.phone,
