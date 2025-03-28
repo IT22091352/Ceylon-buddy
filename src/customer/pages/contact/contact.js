@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import './contact.css';
 import emailjs from '@emailjs/browser';
 
 function Contact() {
+  // Initialize EmailJS when component mounts
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init("wBuwOGjV3u8lXTdrV");
+  }, []);
+
   const [validated, setValidated] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -61,13 +67,17 @@ function Contact() {
       message: formData.message,
     };
     
-    // Send email using EmailJS
-    // Make sure to replace YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, and YOUR_PUBLIC_KEY with actual values
+    // Use environment variables with fallbacks to hardcoded values
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || "service_pt9c499";
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_nhq0nit";
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "wBuwOGjV3u8lXTdrV";
+    
+    // Send email using EmailJS with fallback values
     emailjs.send(
-      'service_pt9c499',
-      'template_nhq0nit',
+      serviceId,
+      templateId,
       templateParams,
-      'wBuwOGjV3u8lXTdrV'
+      publicKey
     )
     .then((response) => {
       console.log('Email sent successfully:', response);
@@ -97,7 +107,7 @@ function Contact() {
         submitting: false,
         success: false,
         error: true,
-        message: "There was an error sending your request. Please try again or contact us directly."
+        message: `Error sending request: ${err.text || 'Unknown error'}. Please try again or contact us directly.`
       });
     });
   };
@@ -552,4 +562,3 @@ function Contact() {
 }
 
 export default Contact;
-//service_pt9c499

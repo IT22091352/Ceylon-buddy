@@ -233,29 +233,33 @@ function Home() {
     <div className="home-page">
       {/* Hero Section with Video Background and Booking Form */}
       <section className="hero-section relative">
-        <div className="hero-video-container">
-          <div className="hero-overlay bg-gradient-to-r from-slate-900/90 to-emerald-900/70"></div>
-          <video autoPlay muted loop className="hero-video object-cover">
-            <source src="/assets/photos/homepage/hero-bg.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <Container>
-          <div className="hero-content text-white">
-            <h1 className="animate-on-scroll fade-up text-4xl md:text-5xl lg:text-6xl font-bold">Discover the Beauty of Sri Lanka</h1>
-            <p className="animate-on-scroll fade-up delay-1 text-xl md:text-2xl mt-4 text-gray-100">Authentic experiences guided by local experts</p>
-            <div className="hero-buttons animate-on-scroll fade-up delay-2 mt-8 flex justify-center">
-              <Button 
-                as={Link} 
-                to="/contact#book-guide-section" 
-                size="lg" 
-                className="find-guide-btn px-8 py-3 rounded-full font-semibold text-lg shadow-lg bg-gradient-to-r from-emerald-600 to-teal-500 border-0 hover:shadow-xl transition-all"
-              >
-                <i className="fas fa-user-tie me-2"></i> Find Tour Guide
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </section>
+  <div className="hero-video-container">
+    <video autoPlay muted loop className="hero-video object-cover">
+      <source src={heroVideo} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <Container>
+    <div className="hero-content text-white">
+      <h1 className="animate-on-scroll fade-up text-4xl md:text-5xl lg:text-6xl font-bold">
+        Discover the Beauty of Sri Lanka
+      </h1>
+      <p className="animate-on-scroll fade-up delay-1 text-xl md:text-2xl mt-4 text-gray-100">
+        Authentic experiences guided by local experts
+      </p>
+      <div className="hero-buttons animate-on-scroll fade-up delay-2 mt-8 flex justify-center">
+        <Button
+          as={Link}
+          to="/contact#book-guide-section"
+          size="lg"
+          className="find-guide-btn px-8 py-3 rounded-full font-semibold text-lg shadow-lg bg-gradient-to-r from-emerald-600 to-teal-500 border-0 hover:shadow-xl transition-all"
+        >
+          <i className="fas fa-user-tie me-2"></i> Find Tour Guide
+        </Button>
+      </div>
+    </div>
+  </Container>
+</section>
 
       {/* Welcome Section with Enhanced Images */}
       <section className="welcome-section py-16 md:py-24 bg-gray-50">
