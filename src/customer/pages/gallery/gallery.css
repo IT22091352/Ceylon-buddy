@@ -187,7 +187,7 @@
 .gallery-hero {
   height: 500px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              url('https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg');
+              url('../../../assets/photos/destination/ninearch.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -365,6 +365,7 @@
 
 /* Main Gallery Section */
 .main-gallery {
+  
   padding: 4rem 0;
   background-color: var(--light);
 }
@@ -469,14 +470,15 @@
 
 .category-badge {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  right: 15px;
   background-color: var(--primary);
   color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.7rem;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-size: 0.8rem;
   font-weight: 600;
+  z-index: 1;
 }
 
 .card-rating {

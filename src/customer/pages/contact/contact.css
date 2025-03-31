@@ -20,7 +20,7 @@
 
 /* Hero Section */
 .contact-hero {
-  background-image: url('https://images.unsplash.com/photo-1544962023-b85a9dc1c9b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+  background-image: url('../../../assets/photos/contactpage/contactushero.jpg');
   background-size: cover;
   background-position: center;
   color: white;

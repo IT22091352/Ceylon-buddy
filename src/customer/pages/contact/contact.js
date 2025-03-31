@@ -3,6 +3,7 @@ import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import './contact.css';
 import emailjs from '@emailjs/browser';
 
+
 function Contact() {
   // Initialize EmailJS when component mounts
   useEffect(() => {

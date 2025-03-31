@@ -2,6 +2,15 @@ import React from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './about.css';
+import elephantImage from '../../../assets/photos/aboutpage/elephent.jpg';
+import lighthouse from '../../../assets/photos/aboutpage/lighthouse.jpg';
+import ninearch from '../../../assets/photos/aboutpage/ninearchabout.jpg';
+import pecock from '../../../assets/photos/aboutpage/pecock.jpg';
+import vision from '../../../assets/photos/aboutpage/vision.jpg';
+
+
+
+
 
 function About() {
   // Team members data
@@ -84,16 +93,16 @@ function About() {
       <section className="image-banner">
         <div className="image-grid">
           <div className="grid-item item1">
-            <img src="https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg" alt="Sri Lanka Landscape" />
+          <img src={elephantImage} alt="Sri Lanka Landscape" />
           </div>
           <div className="grid-item item2">
-            <img src="https://images.pexels.com/photos/5388476/pexels-photo-5388476.jpeg" alt="Tea Plantation" />
+            <img src={lighthouse} alt="Tea Plantation" />
           </div>
           <div className="grid-item item3">
-            <img src="https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg" alt="Beach" />
+            <img src={pecock} alt="Beach" />
           </div>
           <div className="grid-item item4">
-            <img src="https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg" alt="Cultural Site" />
+            <img src={ninearch} alt="Cultural Site" />
           </div>
         </div>
       </section>
@@ -105,7 +114,7 @@ function About() {
             <Col lg={6}>
               <div className="vision-image">
                 <img 
-                  src="https://images.pexels.com/photos/5388487/pexels-photo-5388487.jpeg" 
+                  src={vision}
                   alt="Sri Lanka Vision" 
                   className="img-fluid rounded shadow"
                 />

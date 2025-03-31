@@ -845,24 +845,59 @@ function Home() {
         </Container>
       </section>
 
-      {/* Call to Action Banner with Enhanced Background */}
-      <section className="cta-banner" style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1590733720117-a79e377578ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')",
-        backgroundPosition: "center",
-        backgroundSize: "cover"
-      }}>
-        <Container>
-          <div className="cta-content text-center">
-            <h2>Ready for an Unforgettable Adventure?</h2>
-            <p>Let us help you create the perfect Sri Lankan experience</p>
-            <Button as={Link} to="/contact" variant="light" size="lg">
-              Start Planning Now <i className="fas fa-paper-plane ms-2"></i>
-            </Button>
-          </div>
-        </Container>
-      </section>
+      <section
+  className="cta-banner relative py-20 md:py-28"
+  style={{
+    backgroundImage: "url('https://images.unsplash.com/photo-1590733720117-a79e377578ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed",
+  }}
+>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
 
-      {/* Photo Gallery - New Section */}
+  <Container className="relative z-10">
+    <div className="section-header text-center text-white">
+      {/* Subtitle */}
+      <div className="section-subtitle text-teal-400 font-medium text-lg uppercase tracking-wider animate-on-scroll fade-up">
+        Day Plans
+      </div>
+
+      {/* Title */}
+      <h2 className="section-title text-4xl md:text-5xl font-extrabold leading-tight animate-on-scroll fade-up delay-1">
+        Ready for an Unforgettable Adventure?
+      </h2>
+
+      {/* Description */}
+      <p className="section-description text-lg md:text-xl mt-4 text-gray-300 animate-on-scroll fade-up delay-2">
+        Let us help you create the perfect Sri Lankan experience
+      </p>
+
+      {/* Buttons */}
+      <div className="cta-buttons mt-8 flex flex-col md:flex-row gap-4 justify-center animate-on-scroll fade-up delay-3">
+        <Button
+          as={Link}
+          to="/contact"
+          size="lg"
+          className="px-8 py-3 rounded-full font-semibold text-lg shadow-lg bg-gradient-to-r from-teal-500 to-emerald-600 text-white hover:from-teal-600 hover:to-emerald-700 transition-all"
+        >
+          <i className="fas fa-paper-plane me-2"></i> Start Planning Now
+        </Button>
+        <Button
+          as={Link}
+          to="/gallery"
+          size="lg"
+          className="px-8 py-3 rounded-full font-semibold text-lg shadow-lg bg-white text-teal-600 hover:bg-gray-100 hover:text-teal-700 border-2 border-white transition-all"
+        >
+          <i className="fas fa-map-marked-alt me-2"></i> Explore Destinations
+        </Button>
+      </div>
+    </div>
+  </Container>
+</section>
+
+      {/* Photo Gallery - New Section
       <section className="gallery-preview-section">
         <Container>
           <div className="section-header text-center">
@@ -900,37 +935,48 @@ function Home() {
             </Button>
           </div>
         </Container>
-      </section>
+      </section> */}
 
-      {/* Newsletter Section */}
-      <section className="newsletter-section py-16 bg-slate-100">
-        <Container>
-          <Row className="justify-content-center">
-            <Col lg={8}>
-              <div className="newsletter-container bg-white shadow-xl rounded-2xl overflow-hidden">
-                <div className="newsletter-content p-6 md:p-10 text-center">
-                  <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-3">Subscribe to Our Newsletter</h2>
-                  <p className="text-gray-600 mb-6">Get updates on new tour packages and travel tips for Sri Lanka</p>
-                  <form className="newsletter-form">
-                    <div className="form-group flex flex-col md:flex-row gap-3">
-                      <input type="email" placeholder="Your email address" className="form-control shadow-sm bg-gray-50 border-0 flex-grow py-3 px-4 rounded-lg focus:ring-2 focus:ring-emerald-500" />
-                      <Button type="submit" className="btn-modern bg-emerald-600 hover:bg-emerald-700 border-0 py-3 px-6">
-                        Subscribe <i className="fas fa-paper-plane ms-2"></i>
-                      </Button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
-
-      {/* Final Call-to-Action with Enhanced Background */}
+      {/* Letterhead Download Section - Modified from Newsletter */}
+      <section className="newsletter-section py-16 bg-slate-50">
+  <Container>
+    <Row className="justify-content-center">
+      <Col lg={8}>
+        <div className="newsletter-container bg-gradient-to-r from-teal-600 to-emerald-700 shadow-xl rounded-2xl overflow-hidden">
+          <div className="newsletter-content p-6 md:p-10 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Tourist Information Pack</h2>
+            <p className="text-gray-100 mb-6">
+              Download our official letterhead with essential travel information and tips for your Sri Lankan adventure
+            </p>
+            <div className="download-options flex flex-col md:flex-row gap-3 justify-center">
+              <Button
+                className="btn-modern bg-white text-teal-700 hover:bg-gray-100 border-0 py-3 px-6 shadow-md hover:shadow-lg transition-all"
+                href="/downloads/ceylon-buddy-tourist-letterhead.pdf"
+                download
+              >
+                <i className="fas fa-file-pdf me-2 text-red-500"></i> Download PDF
+              </Button>
+              <Button
+                className="btn-modern bg-white text-blue-700 hover:bg-gray-100 border-0 py-3 px-6 shadow-md hover:shadow-lg transition-all"
+                href="/downloads/ceylon-buddy-tourist-letterhead.docx"
+                download
+              >
+                <i className="fas fa-file-word me-2 text-blue-500"></i> Download Word
+              </Button>
+            </div>
+            <p className="text-sm text-gray-100 mt-4">
+              <i className="fas fa-info-circle me-1"></i> Contains travel guidelines, emergency contacts, and useful phrases
+            </p>
+          </div>
+        </div>
+      </Col>
+    </Row>
+  </Container>
+</section>
+      {/* Call-to-Action with Enhanced Background */}
       <section className="final-cta py-20 md:py-28 relative">
         <div className="absolute inset-0 bg-fixed" style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1602435886481-9196872ac09c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')",
-          backgroundPosition: "center",
           backgroundSize: "cover"
         }}></div>
         <div className="cta-overlay bg-gradient-to-r from-slate-900/80 to-emerald-900/70 absolute inset-0"></div>
