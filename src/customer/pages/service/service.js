@@ -2,6 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button, Nav, Tab, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './service.css';
+import tourpackages from '../../../../src/assets/photos/servicepage/tourpackages.jpg';
+import TourPlanning from '../../../../src/assets/photos/servicepage/TourPlanning.jpg';
+import transport from '../../../../src/assets/photos/servicepage/transport.jpg';
+import guide from '../../../../src/assets/photos/servicepage/guide.jpg';
+import Tourism from '../../../../src/assets/photos/servicepage/Tourism.jpg';
+import sigiriya from '../../../../src/assets/photos/servicepage/sigiriya.jpg';
+import GalleBeach from '../../../../src/assets/photos/servicepage/GalleBeach.jpg';
+import Kandy from '../../../../src/assets/photos/servicepage/Kandy.jpg';
+import SigiriyaKandy from '../../../../src/assets/photos/servicepage/SigiriyaKandy.jpg';
+
+
 
 function Service() {
   // Services data
@@ -11,7 +22,7 @@ function Service() {
       title: "Customized Travel Packages",
       description: "Whether you seek adventure, culture, nature, or luxury, we design tailored experiences that suit your interests and budget.",
       icon: "fas fa-suitcase",
-      image: "https://images.pexels.com/photos/5388487/pexels-photo-5388487.jpeg",
+      image: tourpackages,
       color: "#FF7043"
     },
     {
@@ -27,7 +38,7 @@ function Service() {
       title: "Tour & Activity Planning",
       description: "Explore Sri Lanka's iconic landmarks, wildlife safaris, scenic hikes, and hidden gems with expertly curated itineraries.",
       icon: "fas fa-map-marked-alt",
-      image: "https://images.pexels.com/photos/3800120/pexels-photo-3800120.jpeg",
+      image: TourPlanning,
       color: "#66BB6A"
     },
     {
@@ -35,7 +46,7 @@ function Service() {
       title: "Transportation & Transfers",
       description: "Hassle-free airport pickups, private drivers, and comfortable transport options to get you around.",
       icon: "fas fa-car",
-      image: "https://images.pexels.com/photos/6249089/pexels-photo-6249089.jpeg",
+      image: transport,
       color: "#FFCA28"
     },
     {
@@ -43,7 +54,7 @@ function Service() {
       title: "Local Expertise & Guidance",
       description: "Insider tips, travel advice, and recommendations to ensure an authentic and memorable journey.",
       icon: "fas fa-user-tie",
-      image: "https://images.pexels.com/photos/8804841/pexels-photo-8804841.jpeg",
+      image: guide,
       color: "#AB47BC"
     },
     {
@@ -51,7 +62,7 @@ function Service() {
       title: "Sustainable Tourism",
       description: "We promote eco-friendly travel, support local communities, and encourage ethical tourism practices.",
       icon: "fas fa-leaf",
-      image: "https://images.pexels.com/photos/3735238/pexels-photo-3735238.jpeg",
+      image: Tourism,
       color: "#26A69A"
     }
   ];
@@ -93,7 +104,7 @@ function Service() {
           id: 1,
           title: "Sigiriya & Dambulla",
           subtitle: "Cultural & Adventure",
-          image: "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg",
+          image: sigiriya,
           highlights: [
             "Morning: Drive to Sigiriya (4 hrs from Colombo)",
             "Climb Sigiriya Rock Fortress (UNESCO site)",
@@ -107,7 +118,7 @@ function Service() {
           id: 2,
           title: "Galle & Beach Experience",
           subtitle: "Coastal & Heritage",
-          image: "https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg",
+          image: GalleBeach,
           highlights: [
             "Morning: Drive to Galle (2 hrs)",
             "Explore Galle Fort (UNESCO site)",
@@ -121,7 +132,7 @@ function Service() {
           id: 3,
           title: "Kandy & Tea Experience",
           subtitle: "Cultural & Scenic",
-          image: "https://images.pexels.com/photos/5388476/pexels-photo-5388476.jpeg",
+          image: Kandy,
           highlights: [
             "Morning: Drive to Kandy (3 hrs)",
             "Visit Temple of the Tooth Relic",
@@ -140,7 +151,7 @@ function Service() {
           id: 1,
           title: "Sigiriya & Kandy",
           subtitle: "Culture & Adventure",
-          image: "https://images.unsplash.com/photo-1589308247424-d598d0056469?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: SigiriyaKandy,
           highlights: [
             "Day 1: Sigiriya & Dambulla",
             "Early morning drive to Sigiriya (4.5 hrs)",

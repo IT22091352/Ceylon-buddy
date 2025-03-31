@@ -3,6 +3,10 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+// Import components
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+
 // Import pages
 import Home from './customer/pages/home/home';
 import About from './customer/pages/about/about';
@@ -74,7 +78,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="main-content">
+      <NavBar />
+      <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -82,7 +87,8 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
+      </main>
+      <Footer />
     </div>
   );
 }

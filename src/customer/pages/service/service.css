@@ -20,7 +20,7 @@
 
 /* Hero Section */
 .service-hero {
-  background-image: url('https://images.pexels.com/photos/1834399/pexels-photo-1834399.jpeg');
+  background-image: url('../../../../src/assets/photos/destination/sigiriyahero.jpg');
   background-size: cover;
   background-position: center;
   color: white;

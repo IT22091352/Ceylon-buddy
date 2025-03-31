@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import { Modal, Button, Card, Container, Row, Col, Badge, Nav, Tab } from 'react-bootstrap';
 import './gallery.css';
+import sigiriyaImage from '../../../assets/photos/destination/sigiriya.jpg';
+import SigiriyaFrescoes from '../../../assets/photos/destination/SigiriyaFrescoes.jpeg';
+import MirrorWall from '../../../assets/photos/destination/MirrorWall.jpeg';
+import WaterGardens from '../../../assets/photos/destination/WaterGardens.jpeg'
+import SummitPalaceRuins from '../../../assets/photos/destination/SummitPalaceRuins.jpeg'
+
 
 // Sample data of Sri Lankan tourist places
 const sriLankanPlaces = [
   {
     id: 1,
     name: "Sigiriya Rock Fortress",
-    image: "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg", // Updated image URL
+    image: '../assets/photos/destination/sigiriya.jpg',
     description: "Sigiriya is an ancient rock fortress located in the northern Matale District. It is a UNESCO World Heritage site and one of the best preserved examples of ancient urban planning. The name refers to a site of historical and archaeological significance dominated by a massive column of rock nearly 200 meters high.",
     location: "Central Province",
     category: "Heritage",
@@ -21,27 +27,27 @@ const sriLankanPlaces = [
         {
           name: "The Lion's Paw Entrance",
           description: "The original entrance to the palace was through a massive lion figure. Today, only the enormous paws remain, carved into the rock at the base of the final stairway to the summit. These impressive stone paws give visitors a sense of the grand scale of the original structure.",
-          image: "https://images.unsplash.com/photo-1626194062878-902ca12051cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: sigiriyaImage
         },
         {
           name: "Sigiriya Frescoes",
           description: "Halfway up the rock is a sheltered gallery containing colorful frescoes of beautiful maidens, believed to represent celestial nymphs or the king's concubines. Only 21 of the original hundreds of paintings survive today. The vibrant colors and meticulous details of these 5th-century paintings are remarkably well-preserved.",
-          image: "https://images.unsplash.com/photo-1589394697202-1ae8a0bcdace?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: SigiriyaFrescoes // Replace with the desired link
         },
         {
           name: "Mirror Wall",
           description: "Near the frescoes is the 'Mirror Wall,' once polished so highly that the king could see his reflection in it. The wall is now famous for the ancient graffiti inscribed by visitors over the centuries, some dating back to the 8th century. These inscriptions have provided valuable insights into the development of the Sinhala language and script.",
-          image: "https://images.unsplash.com/photo-1564989636771-9835e5674262?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: MirrorWall
         },
         {
           name: "Water Gardens",
           description: "At the base of the rock lie symmetrically laid out water gardens featuring fountains, pools, and water channels. These sophisticated hydraulic systems, which still function during the rainy season, demonstrate the advanced engineering skills of ancient Sri Lankans. The gardens combine elements of formal symmetry with asymmetrical features.",
-          image: "https://images.unsplash.com/photo-1564989747-38023a68dc96?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: WaterGardens
         },
         {
           name: "Summit Palace Ruins",
           description: "At the flat summit, visitors can explore the ruins of the palace complex, including the royal residence, throne, audience hall, and swimming pool. Though only the foundations remain, they provide a fascinating glimpse into the layout of this ancient sky palace. The panoramic views of the surrounding landscape from the top are truly breathtaking.",
-          image: "https://images.unsplash.com/photo-1518555328854-e82bad1ba562?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: SummitPalaceRuins
         }
       ],
       activities: [
@@ -821,7 +827,7 @@ function Gallery() {
                           <Col lg={6}>
                             <div className="activities-image">
                               <img 
-                                src="https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg" 
+                                src="../../../assets/photos/destination/sigiriyaactivity.jpg" 
                                 alt="Activities in Galle Fort"
                                 className="img-fluid rounded"
                               />

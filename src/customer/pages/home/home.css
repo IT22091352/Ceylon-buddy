@@ -110,6 +110,43 @@ section {
   background: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay for better text visibility */
   z-index: 0;
 }
+/* Brand styling */
+.brand-icon {
+  color: #1a73e8;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .brand-icon {
+  transform: rotate(20deg);
+}
+
+.brand-text {
+  font-family: 'Montserrat', sans-serif; /* Import this font in your project */
+  letter-spacing: 0.5px;
+}
+
+.ceylon {
+  font-weight: 700;
+  color: #0056b3;
+  font-size: 1.3rem;
+}
+
+.buddy {
+  font-weight: 500;
+  color: #138496;
+  margin-left: 2px;
+  font-size: 1.3rem;
+}
+
+/* For the transparent to solid navbar effect */
+.tourism-navbar.scrolled .ceylon {
+  color: #003d7f;
+}
+
+.tourism-navbar.scrolled .buddy {
+  color: #107385;
+}
 
 /* Enhanced Hero Button */
 .hero-buttons {
