@@ -272,13 +272,6 @@ function Contact() {
                 <h3>Request Your Guide</h3>
                 <p>Fill in your details below and we'll get back to you within 24 hours</p>
                 
-                {submitStatus.success && (
-                  <div className="alert alert-success">
-                    <i className="fas fa-check-circle me-2"></i>
-                    {submitStatus.message}
-                  </div>
-                )}
-                
                 {submitStatus.error && (
                   <div className="alert alert-danger">
                     <i className="fas fa-exclamation-circle me-2"></i>
@@ -446,6 +439,20 @@ function Contact() {
                         </>
                       )}
                     </Button>
+                    
+                    {submitStatus.success && (
+                      <div className="alert alert-success mt-3">
+                        <div className="success-checkmark">
+                          <div className="check-icon">
+                            <i className="fas fa-check"></i>
+                          </div>
+                        </div>
+                        <div>
+                          <strong>Thank you for your booking request!</strong><br />
+                          We'll contact you via email shortly to confirm your tour.
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </Form>
               </div>
@@ -516,7 +523,7 @@ function Contact() {
             <Col lg={6}>
               <div className="faq-item">
                 <h3><i className="fas fa-question-circle"></i> What payment methods do you accept?</h3>
-                <p>We accept credit cards, PayPal, bank transfers, and cash payments. For tour bookings, we typically require a 20% deposit to confirm your reservation with the balance due before the tour begins.</p>
+                <p>We accept credit cards, bank transfers, and cash payments. For tour bookings, we typically require a 20% deposit to confirm your reservation with the balance due before the tour begins.</p>
               </div>
               
               <div className="faq-item">
