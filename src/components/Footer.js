@@ -82,7 +82,7 @@ function Footer() {
                 </p>
                 <p className="mb-2"><i className="fas fa-map-marker-alt me-2"></i> Sri Lanka</p>
                 
-                <div className="newsletter-mini mt-4">
+                {/* <div className="newsletter-mini mt-4">
                   <h5>Subscribe to our newsletter</h5>
                   <Form className="d-flex mt-2">
                     <Form.Control 
@@ -94,7 +94,7 @@ function Footer() {
                       <i className="fas fa-paper-plane"></i>
                     </Button>
                   </Form>
-                </div>
+                </div> */}
               </div>
             </Col>
           </Row>
@@ -105,7 +105,7 @@ function Footer() {
         <Container>
           <div className="copyright">
             &copy; {currentYear} <strong>Ceylon Buddy</strong>. All Rights Reserved.
-            <div className="mt-1 text-sm">Designed with <i className="fas fa-heart text-danger"></i> for Sri Lankan tourism</div>
+            <div className="mt-1 text-sm">Designed by chathukadilakshana</div>
           </div>
         </Container>
       </div>

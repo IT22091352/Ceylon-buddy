@@ -13,10 +13,19 @@ import Kandy from '../../../../src/assets/photos/servicepage/Kandy.jpg';
 import SigiriyaKandy from '../../../../src/assets/photos/servicepage/SigiriyaKandy.jpg';
 import Kandyplan from '../../../../src/assets/photos/servicepage/dayPlans/Kandy.jpeg';
 import mirissa from '../../../../src/assets/photos/servicepage/dayPlans/mirissa.jpg';
-import brownsbeach from '../../../../src/assets/photos/servicepage/dayPlans/brownsbeach.jpeg';
+import kumbalwela from '../../../../src/assets/photos/servicepage/dayPlans/kumbalwela.jpg';
 import Ellatrainride from '../../../assets/photos/servicepage/dayPlans/Ellatrainride.jpeg';
 import yala from '../../../assets/photos/servicepage/dayPlans/yala.jpg';
 import NuwaraEliya from '../../../assets/photos/servicepage/dayPlans/NuwaraEliya.jpeg';
+import yalaelephent from '../../../assets/photos/servicepage/dayPlans/yalaelephent.jpg';
+import gallefort from '../../../assets/photos/servicepage/dayPlans/gallefort.jpg';
+import mirissaday5 from '../../../assets/photos/servicepage/dayPlans/mirissaday5.jpg';
+import dambulla from '../../../assets/photos/servicepage/dayPlans/dambulla.jpeg';
+import queens from '../../../assets/photos/servicepage/dayPlans/queens.jpg';
+import nelligala from '../../../assets/photos/servicepage/dayPlans/nelligala.jpg';
+import wildlife from '../../../assets/photos/servicepage/dayPlans/wildlife.jpg';
+import colombo from '../../../assets/photos/servicepage/dayPlans/colombo.jpg';
+
 
 
 
@@ -296,7 +305,7 @@ function Service() {
           id: 1,
           title: "Sigiriya, Kandy, Nuwara Eliya, Ella & Yala",
           subtitle: "Cultural + Scenic Train + Wildlife",
-          image: "https://images.unsplash.com/photo-1586344483413-86d53498ac63?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: yalaelephent,
           highlights: [
             "Day 1: Sigiriya & Dambulla",
             "Drive to Sigiriya (4.5 hrs from Colombo)",
@@ -330,7 +339,7 @@ function Service() {
           id: 2,
           title: "Galle, Mirissa, Yala, Ella & Nuwara Eliya",
           subtitle: "Beaches + Wildlife + Hill Country",
-          image: "https://images.unsplash.com/photo-1605004670074-85667859ae37?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: gallefort,
           highlights: [
             "Day 1: Galle & Unawatuna",
             "Drive to Galle (2.5 hrs)",
@@ -361,7 +370,7 @@ function Service() {
           id: 3,
           title: "Sigiriya, Kandy, Nuwara Eliya, Ella & Mirissa",
           subtitle: "Culture + Scenic + Beach",
-          image: "https://images.unsplash.com/photo-1596628069661-3c59217d209f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: mirissaday5,
           highlights: [
             "Day 1: Sigiriya & Dambulla",
             "Drive to Sigiriya",
@@ -399,7 +408,7 @@ function Service() {
           id: 1,
           title: "Sigiriya, Kandy, Nuwara Eliya, Ella, Yala & Mirissa",
           subtitle: "Culture + Hill Country + Safari + Beach",
-          image: "https://images.unsplash.com/photo-1596907914647-5304439f420f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: dambulla,
           highlights: [
             "Day 1: Sigiriya & Dambulla",
             "Drive to Sigiriya (4.5 hrs from Colombo)",
@@ -408,7 +417,7 @@ function Service() {
             "Optional: Minneriya National Park Safari",
             "Overnight in Sigiriya/Kandy",
             "Day 2: Kandy & Nuwara Eliya",
-            "Visit Temple of the Tooth Relic",
+            "Visit Temple of the Tooth Relic ",
             "Explore Royal Botanical Gardens",
             "Drive to Nuwara Eliya (2.5 hrs)",
             "Visit Tea Plantations & Gregory Lake",
@@ -437,7 +446,7 @@ function Service() {
           id: 2,
           title: "Galle, Mirissa, Yala, Ella, Nuwara Eliya & Kandy",
           subtitle: "Beach + Wildlife + Hill Country + Culture",
-          image: "https://images.unsplash.com/photo-1588072770148-2a1a6c983101?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image:queens,
           highlights: [
             "Day 1: Galle & Unawatuna",
             "Drive to Galle (2.5 hrs)",
@@ -478,7 +487,7 @@ function Service() {
           id: 1,
           title: "Sigiriya, Kandy, Nuwara Eliya, Ella, Yala & Mirissa",
           subtitle: "Nature, Adventure & Cultural Highlights",
-          image: "https://images.unsplash.com/photo-1540310287592-d81dc3766c4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: nelligala,
           highlights: [
             "Day 1: Sigiriya & Dambulla",
             "Arrive at Bandaranaike International Airport",
@@ -488,7 +497,7 @@ function Service() {
             "Overnight in Sigiriya",
             "Day 2: Kandy & Nuwara Eliya",
             "Drive to Kandy (2.5 hrs)",
-            "Visit Temple of the Tooth Relic",
+            "Visit Temple of the Tooth Relic and Nelligala temple",
             "Visit Royal Botanical Gardens (optional)",
             "Drive to Nuwara Eliya (2.5 hrs)",
             "Explore Gregory Lake and Tea Plantations",
@@ -527,7 +536,7 @@ function Service() {
           id: 1,
           title: "Complete Sri Lanka Adventure",
           subtitle: "Culture + Hill Country + Wildlife + Beaches",
-          image: "https://images.unsplash.com/photo-1590733720117-a79e377578ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: wildlife,
           highlights: [
             "Day 1: Sigiriya & Dambulla (Culture & Heritage)",
             "Drive to Sigiriya (4.5 hrs from Colombo)",
@@ -650,7 +659,7 @@ function Service() {
           id: 1,
           title: "Complete Sri Lanka Discovery",
           subtitle: "Culture + Nature + Wildlife + Beach + City",
-          image: "https://images.unsplash.com/photo-1602435886481-9196872ac09c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: colombo,
           highlights: [
             "Day 1: Arrival in Colombo & Drive to Sigiriya",
             "Arrive at Colombo International Airport",
@@ -730,7 +739,7 @@ function Service() {
           id: 1,
           title: "Signature Sri Lanka Journey",
           subtitle: "Ultimate Cultural & Natural Exploration",
-          image: brownsbeach,
+          image: kumbalwela,
           highlights: [
             "Day 1: Arrival in Colombo",
             "Arrive at Bandaranaike International Airport and transfer to your hotel",

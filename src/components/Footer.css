@@ -6,7 +6,8 @@
 }
 
 .footer-main {
-  padding: 5rem 0 3rem;
+  padding-top: 1rem; /* Decreased from 2rem */
+  padding-bottom: 0rem;
 }
 
 .footer-logo {
@@ -35,7 +36,7 @@
 
 .footer-info p {
   color: #cbd5e1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .footer-social {
@@ -66,7 +67,7 @@
 .footer-title {
   font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: white;
   position: relative;
   padding-bottom: 0.75rem;
@@ -137,7 +138,7 @@
 .footer-form-control {
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   color: white;
   border-radius: 5px;
 }
@@ -165,7 +166,7 @@
 }
 
 .footer-bottom {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
   color: #94a3b8;

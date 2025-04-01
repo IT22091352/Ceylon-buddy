@@ -3,11 +3,24 @@ import { Modal, Button, Card, Container, Row, Col, Badge, Nav, Tab } from 'react
 import './gallery.css';
 import sigiriyaImage from '../../../assets/photos/destination/sigiriya.jpg';
 import SigiriyaFrescoes from '../../../assets/photos/destination/SigiriyaFrescoes.jpeg';
+import sigiriya from '../../../assets/photos/destination/sigiriya.jpg';
 import MirrorWall from '../../../assets/photos/destination/MirrorWall.jpeg';
 import WaterGardens from '../../../assets/photos/destination/WaterGardens.jpeg'
 import SummitPalaceRuins from '../../../assets/photos/destination/SummitPalaceRuins.jpeg'
 import kandy from '../../../assets/photos/destination/kandy.jpg';
 import ninearch from '../../../assets/photos/destination/ninearch.jpg';
+import ToothRelicChamber from '../../../assets/photos/destination/templeoftooth/ToothRelicChamber.jpg';
+import GoldenRoof from '../../../assets/photos/destination/templeoftooth/GoldenRoof.jpeg';
+import Pattirippuwa  from '../../../assets/photos/destination/templeoftooth/Pattirippuwa.jpeg'
+import AlutMaligawa from '../../../assets/photos/destination/templeoftooth/AlutMaligawa.jpeg'
+import WorldBuddhismMuseum from '../../../assets/photos/destination/templeoftooth/WorldBuddhismMuseum.jpeg'
+import FourDevaleShrines from '../../../assets/photos/destination/templeoftooth/FourDevaleShrines.jpeg'
+import pidurangala from '../../../assets/photos/destination/pidurangala/pidurangala.jpg'
+import nuwaraeliyahero from '../../../assets/photos/destination/nuwaraeliya/nuwaraeliyahero.jpg'
+import Trincomalee from '../../../assets/photos/destination/Trincomalee/Trincomalee.jpg'
+import pasikuda from '../../../assets/photos/destination/pasikuda/pasikuda.jpg'
+
+
 
 
 
@@ -16,7 +29,7 @@ const sriLankanPlaces = [
   {
     id: 1,
     name: "Sigiriya Rock Fortress",
-    image: '../assets/photos/destination/sigiriya.jpg',
+    image: sigiriya,
     description: "Sigiriya is an ancient rock fortress located in the northern Matale District. It is a UNESCO World Heritage site and one of the best preserved examples of ancient urban planning. The name refers to a site of historical and archaeological significance dominated by a massive column of rock nearly 200 meters high.",
     location: "Central Province",
     category: "Heritage",
@@ -67,7 +80,7 @@ const sriLankanPlaces = [
   {
     id: 2,
     name: "Temple of the Sacred Tooth Relic",
-    image: {kandy},
+    image: kandy,
     description: "The Temple of the Sacred Tooth Relic is a Buddhist temple in the city of Kandy. It is located in the royal palace complex of the former Kingdom of Kandy, which houses the relic of the tooth of the Buddha. Since ancient times, the relic has played an important role in local politics because it is believed that whoever holds the relic holds the governance of the country.",
     location: "Kandy",
     category: "Cultural",
@@ -81,32 +94,32 @@ const sriLankanPlaces = [
         {
           name: "The Sacred Tooth Relic Chamber",
           description: "The most revered section of the temple houses the tooth relic within a series of intricately designed golden caskets, nested inside each other like Russian dolls. The relic itself is not openly displayed, but devotees can view the outer casket during rituals. This ornate chamber, adorned with gold and precious gems, represents the pinnacle of Kandyan art and devotion, with intricate ivory carvings and traditional Sri Lankan design elements.",
-          image: "https://images.unsplash.com/photo-1596798733694-de992e5079e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: ToothRelicChamber
         },
         {
           name: "The Golden Roof",
           description: "One of the temple's most distinctive features is its magnificent golden canopy over the main shrine. Completed in 1987, the golden roof was a donation from the Japanese government and devotees. This gleaming structure has become an iconic symbol of Kandy, visible from many vantage points around the city. The roof's brilliance under the sunlight serves as a beacon for pilgrims and a testament to the temple's significance.",
-          image: "https://images.unsplash.com/photo-1590601597312-cfcde05da79f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: GoldenRoof
         },
         {
           name: "Pattirippuwa (Octagon)",
           description: "The Pattirippuwa, or Octagon, was built by Sri Wickrama Rajasinghe, the last king of Kandy, as a viewing gallery for the public to witness royal ceremonies. Today, it houses a collection of historical artifacts and royal items. This distinctive eight-sided structure connects the main temple to the Audience Hall and provides panoramic views of Kandy Lake and the surrounding city.",
-          image: "https://images.unsplash.com/photo-1596776140979-80c9c3bdafb7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: Pattirippuwa 
         },
         {
           name: "Alut Maligawa (New Palace)",
           description: "The Alut Maligawa is a newer addition to the temple complex, featuring a seated Buddha statue and beautiful wall paintings depicting the history of Buddhism in Sri Lanka and the journey of the tooth relic. The hall houses numerous Buddha statues donated by devotees from various Buddhist countries, symbolizing the international significance of this sacred site.",
-          image: "https://images.unsplash.com/photo-1572133323199-bfb87d7a2799?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image:AlutMaligawa
         },
         {
           name: "World Buddhism Museum",
           description: "Located within the temple complex, this museum houses an extensive collection of artifacts, statues, and information about Buddhism across different countries and traditions. The museum offers insights into how Buddhism spread throughout Asia and how different cultures adopted and adapted Buddhist practices, making it an educational complement to the spiritual experience of the temple.",
-          image: "https://images.unsplash.com/photo-1602904539938-a576a7191d28?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: WorldBuddhismMuseum
         },
         {
           name: "The Four Devale Shrines",
           description: "Surrounding the main temple are four important shrines dedicated to guardian deities: Vishnu Devalaya, Natha Devalaya, Pattini Devalaya, and Kataragama Devalaya. These shrines represent the syncretic nature of Sri Lankan religious practice, where Buddhist traditions coexist with Hindu influences. Each shrine has its own architectural style and ritual practices that complement the main temple.",
-          image: "https://images.unsplash.com/photo-1596797501853-c453bee7bc0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: FourDevaleShrines
         }
       ],
       activities: [
@@ -152,7 +165,7 @@ const sriLankanPlaces = [
   {
     id: 19,
     name: "Pidurangala Rock",
-    image: "https://images.unsplash.com/photo-1625378482328-69860f9a382e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: pidurangala,
     description: "Pidurangala Rock is an ancient rock formation located adjacent to the famous Sigiriya Rock Fortress. It offers spectacular panoramic views of the surrounding countryside and a perfect vantage point to see Sigiriya Rock. The moderate hike and lower visitor numbers make it a fantastic alternative to its more famous neighbor.",
     location: "Central Province",
     category: "Adventure",
@@ -231,7 +244,7 @@ const sriLankanPlaces = [
   {
     id: 20,
     name: "Nuwara Eliya",
-    image: "https://images.unsplash.com/photo-1562459664-4457a222882b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: nuwaraeliyahero,
     description: "Nuwara Eliya, known as 'Little England,' is a charming hill station set amidst the tea-carpeted mountains of central Sri Lanka. With its cool climate, colonial architecture, lush gardens, and misty landscapes, it offers visitors a refreshing retreat and a glimpse into the island's British colonial heritage.",
     location: "Central Province",
     category: "Hill Country",
@@ -310,7 +323,7 @@ const sriLankanPlaces = [
   {
     id: 21,
     name: "Trincomalee",
-    image: "https://images.unsplash.com/photo-1605004670074-85667859ae37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image:Trincomalee,
     description: "Trincomalee is a port city on Sri Lanka's northeast coast, blessed with deep-water harbors, pristine beaches, and vibrant coral reefs. Known for Nilaveli and Uppuveli beaches, hot springs, and the sacred Koneswaram Temple perched on Swami Rock, it offers both cultural exploration and beach relaxation.",
     location: "Eastern Province",
     category: "Beach",
@@ -389,7 +402,7 @@ const sriLankanPlaces = [
   {
     id: 22,
     name: "Pasikuda",
-    image: "https://images.unsplash.com/photo-1564414990779-8f9b92960dde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: pasikuda,
     description: "Pasikuda is a stunning coastal village on Sri Lanka's eastern shore, renowned for its shallow, crystal-clear waters and long stretch of beautiful golden sand. The bay's protective reef creates a natural swimming pool perfect for safe bathing, while luxury resorts line the coast offering a perfect beach getaway.",
     location: "Eastern Province",
     category: "Beach",
