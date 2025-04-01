@@ -1288,6 +1288,180 @@ section {
   }
 }
 
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  section {
+    padding: 3rem 0;
+  }
+  
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+  }
+  
+  .service-card,
+  .tour-option-card,
+  .testimonial-card,
+  .cta-container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    width: 100%;
+    display: block;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .service-card-img {
+    height: 150px;
+  }
+  
+  .cta-container,
+  .reason-card,
+  .process-step {
+    padding: 1.5rem 1rem;
+  }
+  
+  .days-tabs .nav-link {
+    padding: 6px 10px;
+  }
+  
+  .tour-option-header {
+    height: 150px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .service-hero {
+    height: 300px;
+  }
+  
+  .tour-label, 
+  .tour-duration {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+  
+  .icon-container {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    bottom: -15px;
+    right: 15px;
+  }
+  
+  .experience-badge {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .experience-badge .number {
+    font-size: 1.6rem;
+  }
+  
+  .experience-badge .text {
+    font-size: 0.7rem;
+  }
+  
+  .process-number {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  
+  .tour-option-body {
+    padding: 15px;
+  }
+  
+  .tour-option-body h4 {
+    font-size: 1.1rem;
+  }
+  
+  .tour-highlights h5 {
+    font-size: 1rem;
+  }
+  
+  .tour-btn {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+  }
+  
+  .timeline-content {
+    padding: 10px;
+  }
+  
+  .timeline-info {
+    font-size: 0.85rem;
+  }
+  
+  /* Fix modal display on tiny screens */
+  .tour-detail-modal .modal-dialog {
+    margin: 0.5rem;
+  }
+  
+  .tour-detail-tabs .nav-link {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Touch-friendly adjustments for mobile */
+@media (max-width: 768px) and (pointer: coarse) {
+  .tour-btn,
+  .action-btn,
+  .book-now-btn,
+  .days-tabs .nav-link,
+  .hero-button {
+    min-height: 44px; /* Minimum touch target size */
+  }
+  
+  .plan-days {
+    width: 44px;
+    height: 44px;
+  }
+  
+  /* Increase spacing between interactive elements */
+  .booking-actions {
+    gap: 15px;
+  }
+  
+  .tour-actions {
+    gap: 15px;
+  }
+  
+  .days-tabs .nav-item {
+    margin: 0 4px;
+  }
+}
+
 /* Tour Detail Modal Styles */
 .tour-detail-modal .modal-dialog {
   max-width: 800px;
@@ -1782,6 +1956,34 @@ section {
   .modal-title-content {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .service-page {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+  
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  .container, 
+  .container-fluid,
+  .row {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  section {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
   
   .tour-days-badge {
