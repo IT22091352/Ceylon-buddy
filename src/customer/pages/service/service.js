@@ -891,9 +891,9 @@ function Service() {
           <div className="hero-content">
             <h1>Our Services</h1>
             <p>Explore Sri Lanka with confidence and comfort</p>
-            <Button variant="primary" size="lg" className="hero-button">
+            {/* <Button variant="primary" size="lg" className="hero-button">
               Start Planning <i className="fas fa-arrow-right ms-2"></i>
-            </Button>
+            </Button> */}
           </div>
         </Container>
       </div>
@@ -968,12 +968,7 @@ function Service() {
                       </Nav.Link>
                     </Nav.Item>
                   ))}
-                  <Nav.Item>
-                    <Nav.Link eventKey="more">
-                      <span className="days-number"><i className="fas fa-plus"></i></span>
-                      <span className="days-text">More</span>
-                    </Nav.Link>
-                  </Nav.Item>
+                
                 </Nav>
               </div>
               
