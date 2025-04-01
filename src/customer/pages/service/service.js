@@ -11,6 +11,16 @@ import sigiriya from '../../../../src/assets/photos/servicepage/sigiriya.jpg';
 import GalleBeach from '../../../../src/assets/photos/servicepage/GalleBeach.jpg';
 import Kandy from '../../../../src/assets/photos/servicepage/Kandy.jpg';
 import SigiriyaKandy from '../../../../src/assets/photos/servicepage/SigiriyaKandy.jpg';
+import Kandyplan from '../../../../src/assets/photos/servicepage/dayPlans/Kandy.jpeg';
+import mirissa from '../../../../src/assets/photos/servicepage/dayPlans/mirissa.jpg';
+import brownsbeach from '../../../../src/assets/photos/servicepage/dayPlans/brownsbeach.jpeg';
+import Ellatrainride from '../../../assets/photos/servicepage/dayPlans/Ellatrainride.jpeg';
+import yala from '../../../assets/photos/servicepage/dayPlans/yala.jpg';
+import NuwaraEliya from '../../../assets/photos/servicepage/dayPlans/NuwaraEliya.jpeg';
+
+
+
+
 
 
 
@@ -170,7 +180,7 @@ function Service() {
           id: 2,
           title: "Galle & Mirissa",
           subtitle: "Beach & Relaxation",
-          image: "https://images.unsplash.com/photo-1586449480584-34302e933441?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: mirissa,
           highlights: [
             "Day 1: Galle & Unawatuna",
             "Drive to Galle (2.5 hrs)",
@@ -189,7 +199,7 @@ function Service() {
           id: 3,
           title: "Ella & Train Ride",
           subtitle: "Scenic & Adventure",
-          image: "https://images.unsplash.com/photo-1586335915727-9d1a511306f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: Ellatrainride,
           highlights: [
             "Day 1: Nuwara Eliya & Ella",
             "Drive to Nuwara Eliya (4.5 hrs)",
@@ -212,7 +222,7 @@ function Service() {
           id: 1,
           title: "Sigiriya, Kandy & Ella",
           subtitle: "Culture + Adventure + Scenic Train",
-          image: "https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: Kandyplan,
           highlights: [
             "Day 1: Sigiriya & Dambulla",
             "Drive to Sigiriya (4.5 hrs from Colombo)",
@@ -237,7 +247,7 @@ function Service() {
           id: 2,
           title: "Galle, Mirissa & Yala",
           subtitle: "Beaches + Wildlife Safari",
-          image: "https://images.unsplash.com/photo-1590733720117-a79e377578ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: yala,
           highlights: [
             "Day 1: Galle & Unawatuna",
             "Drive to Galle (2.5 hrs)",
@@ -260,7 +270,7 @@ function Service() {
           id: 3,
           title: "Nuwara Eliya, Ella & Yala",
           subtitle: "Scenic + Tea Country + Wildlife",
-          image: "https://images.unsplash.com/photo-1601561415086-62031dfabbc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: NuwaraEliya,
           highlights: [
             "Day 1: Nuwara Eliya",
             "Drive to Nuwara Eliya (4.5 hrs)",
@@ -720,7 +730,7 @@ function Service() {
           id: 1,
           title: "Signature Sri Lanka Journey",
           subtitle: "Ultimate Cultural & Natural Exploration",
-          image: "https://images.unsplash.com/photo-1606997286979-11d3e9f534e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: brownsbeach,
           highlights: [
             "Day 1: Arrival in Colombo",
             "Arrive at Bandaranaike International Airport and transfer to your hotel",

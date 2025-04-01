@@ -3,6 +3,8 @@ import { Container, Row, Col, Button, Card, Carousel, Tab, Nav } from 'react-boo
 import { Link } from 'react-router-dom';
 import './home.css';
 import heroVideo from '../../../assets/photos/homepage/hero-bg.mp4';
+import temple from '../../../assets/photos/homepage/temple.jpg';
+import ninearch from '../../../assets/photos/homepage/ninearch.jpg';
 
 function Home() {
   // State for animated counting
@@ -83,7 +85,7 @@ function Home() {
     {
       id: 2,
       name: "Ella",
-      image: "https://images.pexels.com/photos/5388478/pexels-photo-5388478.jpeg",
+      image: {ninearch},
       description: "Picturesque hill station with lush tea plantations and the famous Nine Arch Bridge.",
       category: "Hill Country"
     },
@@ -267,12 +269,9 @@ function Home() {
           <Row className="align-items-center">
             <Col lg={6} className="mb-5 mb-lg-0">
               <div className="welcome-image relative">
-                <div className="image-stack rounded-2xl overflow-hidden shadow-2xl">
+                <div className="image-stack rounded-1xl overflow-hidden shadow-2xl">
                   <div className="image-stack-item image-stack-item-top">
-                    <img src="https://images.unsplash.com/photo-1546708973-b339540b5162?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tea plantations in Sri Lanka" className="image-hover" />
-                  </div>
-                  <div className="image-stack-item image-stack-item-bottom">
-                    <img src="https://images.unsplash.com/photo-1589308247424-d598d0056469?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ancient temple in Sri Lanka" className="image-hover" />
+                    <img src={temple} alt="Tea plantations in Sri Lanka" className="image-hover" />
                   </div>
                 </div>
                 <div className="experience-badge shadow-xl">

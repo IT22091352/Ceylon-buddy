@@ -339,8 +339,8 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  height: 90%;
+  background-color: rgb(13, 110, 253); /* blue-600 */
 }
 
 .counter-container {
@@ -518,12 +518,12 @@ section {
   width: 70px;
   height: 70px;
   margin: 0 auto 1.5rem;
-  background-color: rgba(10, 147, 150, 0.1);
+  background-color: rgb(13, 110, 253); /* blue-600 */
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: var(--teal);
+  color:white;
   transition: all 0.3s;
 }
 
@@ -2072,5 +2072,402 @@ section {
   .cta-buttons {
     flex-direction: column;
     gap: 1rem;
+  }
+}
+
+/* Add to the bottom of the file - Enhanced Mobile Responsiveness */
+
+/* Mobile Adjustments (576px and below) */
+@media (max-width: 576px) {
+  /* Hero Section Adjustments */
+  .hero-section {
+    min-height: 80vh;
+  }
+
+  .hero-content {
+    padding: 80px 0 120px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  /* Welcome Section */
+  .welcome-image {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .image-stack {
+    height: 300px;
+  }
+
+  .experience-badge {
+    width: 90px;
+    height: 90px;
+    bottom: 20px;
+    left: -10px;
+  }
+
+  .experience-badge .number {
+    font-size: 1.5rem;
+  }
+
+  .experience-badge .text {
+    font-size: 0.75rem;
+  }
+
+  .welcome-content {
+    text-align: center;
+    padding: 0;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .feature-item {
+    justify-content: center;
+  }
+
+  /* Service Cards */
+  .service-overview-card {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.3rem;
+  }
+
+  .service-overview-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-overview-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Counter Section */
+  .counter-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .counter-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.3rem;
+  }
+
+  .counter-number {
+    font-size: 1.75rem !important;
+  }
+
+  .counter-text {
+    font-size: 0.9rem;
+  }
+
+  /* Carousel & Destinations */
+  .carousel-image-container {
+    height: 40vh;
+  }
+
+  .carousel-caption {
+    width: 90%;
+    padding: 1rem;
+    bottom: 5%;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .carousel-caption p {
+    display: none;
+  }
+
+  .carousel-caption .btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .destination-img {
+    height: 180px;
+  }
+
+  .destination-content {
+    padding: 1.25rem;
+  }
+
+  .destination-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .destination-content p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Tour Plans Section */
+  .tour-plan-header {
+    height: 180px;
+  }
+
+  .tour-days-badge {
+    top: 10px;
+    left: 10px;
+    padding: 8px 12px;
+  }
+
+  .days-number {
+    font-size: 1rem;
+  }
+
+  .days-text {
+    font-size: 0.7rem;
+  }
+
+  .tour-plan-body {
+    padding: 1rem;
+  }
+
+  .tour-plan-body h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tour-plan-body p {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tour-highlights li {
+    font-size: 0.85rem;
+  }
+
+  .tour-btn {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  /* Destination Showcase */
+  .destination-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .destination-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .destination-nav .nav-link {
+    white-space: nowrap;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    margin: 0 5px;
+  }
+
+  .destination-showcase {
+    padding: 15px;
+  }
+
+  .destination-showcase-image {
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .destination-showcase-content {
+    text-align: center;
+  }
+
+  .destination-showcase-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .destination-showcase-content .lead {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .destination-showcase-content p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .highlight-item {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    margin: 0 auto 0.5rem;
+  }
+
+  .destination-highlights {
+    justify-content: center;
+  }
+
+  /* Testimonials Section */
+  .testimonial-quote p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .author-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .author-info h4 {
+    font-size: 1rem;
+  }
+
+  .author-info p {
+    font-size: 0.8rem;
+  }
+
+  /* Process Section */
+  .process-step {
+    padding: 1.25rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .process-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .process-step h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .process-step p {
+    font-size: 0.85rem;
+  }
+
+  /* CTA Sections */
+  .cta-banner, .final-cta {
+    padding: 3rem 0;
+  }
+
+  .cta-content h2, .final-cta h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-content p, .final-cta p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  /* Newsletter Section */
+  .newsletter-container {
+    padding: 1.5rem;
+  }
+
+  .newsletter-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .newsletter-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .download-options {
+    flex-direction: column;
+  }
+
+  .download-options .btn {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 380px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .service-icon, .counter-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.1rem;
+  }
+
+  .destination-showcase-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .destination-showcase-content .lead {
+    font-size: 0.9rem;
+  }
+
+  .highlight-item {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .experience-badge {
+    width: 80px;
+    height: 80px;
+  }
+
+  .experience-badge .number {
+    font-size: 1.3rem;
+  }
+
+  .experience-badge .text {
+    font-size: 0.7rem;
+  }
+
+  .service-overview-card h3,
+  .tour-plan-body h3,
+  .process-step h3 {
+    font-size: 1rem;
+  }
+
+  .gallery-item img {
+    height: 180px;
   }
 }

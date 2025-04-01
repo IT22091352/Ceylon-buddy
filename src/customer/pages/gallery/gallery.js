@@ -6,6 +6,9 @@ import SigiriyaFrescoes from '../../../assets/photos/destination/SigiriyaFrescoe
 import MirrorWall from '../../../assets/photos/destination/MirrorWall.jpeg';
 import WaterGardens from '../../../assets/photos/destination/WaterGardens.jpeg'
 import SummitPalaceRuins from '../../../assets/photos/destination/SummitPalaceRuins.jpeg'
+import kandy from '../../../assets/photos/destination/kandy.jpg';
+import ninearch from '../../../assets/photos/destination/ninearch.jpg';
+
 
 
 // Sample data of Sri Lankan tourist places
@@ -64,7 +67,7 @@ const sriLankanPlaces = [
   {
     id: 2,
     name: "Temple of the Sacred Tooth Relic",
-    image: "https://images.pexels.com/photos/2161467/pexels-photo-2161467.jpeg",
+    image: {kandy},
     description: "The Temple of the Sacred Tooth Relic is a Buddhist temple in the city of Kandy. It is located in the royal palace complex of the former Kingdom of Kandy, which houses the relic of the tooth of the Buddha. Since ancient times, the relic has played an important role in local politics because it is believed that whoever holds the relic holds the governance of the country.",
     location: "Kandy",
     category: "Cultural",
