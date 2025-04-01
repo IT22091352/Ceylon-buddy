@@ -26,13 +26,6 @@ import nelligala from '../../../assets/photos/servicepage/dayPlans/nelligala.jpg
 import wildlife from '../../../assets/photos/servicepage/dayPlans/wildlife.jpg';
 import colombo from '../../../assets/photos/servicepage/dayPlans/colombo.jpg';
 
-
-
-
-
-
-
-
 function Service() {
   // Services data
   const services = [
@@ -849,6 +842,9 @@ function Service() {
   const [selectedTour, setSelectedTour] = useState(null);
   const [selectedPlan, setSelectedPlan] = useState(null);
 
+  // Add state for share functionality
+  const [showShareMessage, setShowShareMessage] = useState(false);
+
   // Function to handle View Details button click
   const handleViewDetails = (plan, option) => {
     setSelectedPlan(plan);
@@ -859,6 +855,31 @@ function Service() {
   // Function to close the modal
   const handleCloseModal = () => {
     setShowModal(false);
+  };
+
+  // Function to handle sharing
+  const handleShare = () => {
+    const url = window.location.href;
+    
+    // Try to use the Web Share API if available (works on mobile)
+    if (navigator.share) {
+      navigator.share({
+        title: selectedTour ? `${selectedTour.title} - ${selectedPlan.days} Day Tour in Sri Lanka` : 'Ceylon Buddy Tours',
+        text: selectedTour ? `Check out this amazing ${selectedPlan.days}-day tour in Sri Lanka: ${selectedTour.title}` : 'Check out this amazing tour in Sri Lanka',
+        url: url,
+      })
+      .catch(error => console.log('Error sharing:', error));
+    } else {
+      // Fallback to clipboard for desktop browsers
+      navigator.clipboard.writeText(url)
+        .then(() => {
+          setShowShareMessage(true);
+          setTimeout(() => setShowShareMessage(false), 3000);
+        })
+        .catch(err => {
+          console.error('Failed to copy link: ', err);
+        });
+    }
   };
 
   return (
@@ -1002,9 +1023,6 @@ function Service() {
                                 >
                                   <i className="fas fa-info-circle me-2"></i> View Details
                                 </Button>
-                                {/* <Button as={Link} to="/contact" variant="primary" className="tour-btn book-btn">
-                                  <i className="fas fa-calendar-check me-2"></i> Book Now
-                                </Button> */}
                               </div>
                             </div>
                           </div>
@@ -1247,16 +1265,13 @@ function Service() {
             
             <Modal.Footer>
               <div className="tour-booking-section">
-                <div className="price-info">
-                  <span className="price-label">Starting from</span>
-                  <span className="price-value">$120<small>/person</small></span>
-                </div>
-                
+                {showShareMessage && (
+                  <div className="share-message">
+                    <i className="fas fa-check-circle"></i> Link copied to clipboard!
+                  </div>
+                )}
                 <div className="booking-actions">
-                  <Button variant="outline-secondary" className="action-btn">
-                    <i className="far fa-heart"></i> Save
-                  </Button>
-                  <Button variant="outline-secondary" className="action-btn">
+                  <Button variant="outline-secondary" className="action-btn" onClick={handleShare}>
                     <i className="fas fa-share-alt"></i> Share
                   </Button>
                   <Button as={Link} to="/contact" variant="primary" className="book-now-btn">

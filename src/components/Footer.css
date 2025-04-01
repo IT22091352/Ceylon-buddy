@@ -6,8 +6,8 @@
 }
 
 .footer-main {
-  padding-top: 1rem; /* Decreased from 2rem */
-  padding-bottom: 0rem;
+  padding-top: 2rem; /* Increased from 1rem */
+  padding-bottom: 0rem; /* Increased from 1rem */
 }
 
 .footer-logo {
