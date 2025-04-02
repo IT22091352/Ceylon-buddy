@@ -17,9 +17,9 @@ function About() {
   const teamMembers = [
     {
       id: 1,
-      name: "Ranil  Sampath Appuhamy",
+      name: "Ranil Sampath Appuhamy",
       role: "Founder & CEO",
-      bio: "With over 15 years of experience in tourism, Sanath brings unparalleled expertise and passion for showcasing Sri Lanka to the world.",
+      bio: "Ranil Sampath brings unparalleled expertise and passion for showcasing Sri Lanka to the world.",
       image: "https://randomuser.me/api/portraits/men/32.jpg"
     }
   ];
