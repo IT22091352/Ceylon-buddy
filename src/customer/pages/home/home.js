@@ -5,6 +5,18 @@ import './home.css';
 import heroVideo from '../../../assets/photos/homepage/hero-bg.mp4';
 import temple from '../../../assets/photos/homepage/temple.jpg';
 import ninearch from '../../../assets/photos/homepage/ninearch.jpg';
+import ninearch_hero from '../../../assets/photos/homepage/ninearch_hero.jpg';
+import beachside from '../../../assets/photos/homepage/beachside.jpg';
+import hills from '../../../assets/photos/homepage/hills.jpg';
+import esalaperahera from '../../../assets/photos/homepage/esalaperahera.jpg';
+import MirissaBeach from '../../../assets/photos/homepage/MirissaBeach.jpg';
+import beachgateways from '../../../assets/photos/homepage/BeachGetaways.jpeg';
+import wildlife from '../../../assets/photos/homepage/WildlifeSafaris.jpeg';
+import TheCulturalTriangle from '../../../assets/photos/homepage/TheCulturalTriangle.jpeg';
+import hill from '../../../assets/photos/homepage/hil.jpg';
+
+
+
 
 function Home() {
   // State for animated counting
@@ -77,22 +89,22 @@ function Home() {
   const featuredDestinations = [
     {
       id: 1,
-      name: "Sigiriya Rock Fortress",
-      image: "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg",
+      name: "Kandy",
+      image: esalaperahera,
       description: "Ancient rock fortress with breathtaking views and fascinating history.",
       category: "Heritage"
     },
     {
       id: 2,
       name: "Ella",
-      image: {ninearch},
+      image:ninearch,
       description: "Picturesque hill station with lush tea plantations and the famous Nine Arch Bridge.",
       category: "Hill Country"
     },
     {
       id: 3,
-      name: "Mirissa Beach",
-      image: "https://images.unsplash.com/photo-1586344483413-86d53498ac63?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      name: "Mirissa",
+      image: MirissaBeach,
       description: "Golden sands, palm trees, and crystal-clear waters perfect for whale watching and surfing.",
       category: "Beach"
     }
@@ -103,22 +115,22 @@ function Home() {
     ...featuredDestinations,
     {
       id: 4,
-      name: "Yala National Park",
-      image: "https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg",
+      name: "Nine Arch",
+      image: ninearch_hero,
       description: "Safari adventures with leopards, elephants, and diverse wildlife in their natural habitat.",
       category: "Wildlife"
     },
     {
       id: 5,
-      name: "Galle Fort",
-      image: "https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg",
+      name: "Beach Sides",
+      image: beachside,
       description: "Colonial charm within ancient walls, featuring Dutch architecture and ocean views.",
       category: "Heritage"
     },
     {
       id: 6,
-      name: "Kandy",
-      image: "https://images.pexels.com/photos/2161467/pexels-photo-2161467.jpeg",
+      name: "hills",
+      image: hills,
       description: "Cultural capital featuring the sacred Temple of the Tooth and traditional performing arts.",
       category: "Cultural"
     }
@@ -180,22 +192,22 @@ function Home() {
   const tourismExperiences = [
     {
       title: "Beach Getaways",
-      image: "https://images.unsplash.com/photo-1586344483413-86d53498ac63?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: beachgateways,
       description: "Relax on pristine beaches with golden sands and azure waters."
     },
     {
       title: "Wildlife Safaris",
-      image: "https://images.unsplash.com/photo-1604324565792-a70f0b245d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: wildlife,
       description: "Encounter elephants, leopards, and exotic birds in their natural habitat."
     },
     {
       title: "Cultural Heritage",
-      image: "https://images.unsplash.com/photo-1540310287592-d81dc3766c4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: TheCulturalTriangle,
       description: "Explore ancient temples, colonial forts, and traditional villages."
     },
     {
       title: "Scenic Train Journeys",
-      image: "https://images.pexels.com/photos/5388478/pexels-photo-5388478.jpeg",
+      image: ninearch,
       description: "Experience breathtaking vistas on one of the world's most beautiful rail trips."
     }
   ];
@@ -215,7 +227,7 @@ function Home() {
       id: 2,
       title: "Hill Country & Tea Escape",
       days: 4,
-      image: "https://images.pexels.com/photos/5388476/pexels-photo-5388476.jpeg",
+      image: hills,
       description: "Journey through misty mountains, tour tea plantations, and experience the famous train ride through scenic Ella.",
       price: 320,
       highlights: ["Scenic Train Journey", "Tea Factory Tours", "Mountain Hiking"]
@@ -270,16 +282,10 @@ function Home() {
             <Col lg={6} className="mb-5 mb-lg-0">
               <div className="welcome-image relative">
                 <div className="image-stack rounded-1xl overflow-hidden shadow-2xl">
-                  <div className="image-stack-item image-stack-item-top">
                     <img src={temple} alt="Tea plantations in Sri Lanka" className="image-hover" />
                   </div>
-                </div>
-                <div className="experience-badge shadow-xl">
-                  <div className="inner bg-gradient-to-br from-emerald-600 to-emerald-800">
-                    <span className="number">10+</span>
-                    <span className="text">Years Experience</span>
-                  </div>
-                </div>
+            
+                
               </div>
             </Col>
             <Col lg={6}>

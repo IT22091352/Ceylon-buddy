@@ -209,6 +209,7 @@ section {
 .image-stack {
   position: relative;
   height: 500px;
+  border-radius: 10px;
 }
 
 .image-stack-item {
