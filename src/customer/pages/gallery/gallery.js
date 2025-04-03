@@ -543,12 +543,12 @@ function Gallery() {
         <div className="hero-content">
           <h1>Explore the Beauty of Sri Lanka</h1>
           <p>Discover incredible destinations that will take your breath away</p>
-          <div className="hero-search">
+          {/* <div className="hero-search">
             <input type="text" placeholder="Search destinations..." className="search-input" />
             <button className="search-btn">
               <i className="fas fa-search"></i>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -7,13 +7,17 @@ import temple from '../../../assets/photos/homepage/temple.jpg';
 import ninearch from '../../../assets/photos/homepage/ninearch.jpg';
 import ninearch_hero from '../../../assets/photos/homepage/ninearch_hero.jpg';
 import beachside from '../../../assets/photos/homepage/beachside.jpg';
-import hills from '../../../assets/photos/homepage/hills.jpg';
 import esalaperahera from '../../../assets/photos/homepage/esalaperahera.jpg';
 import MirissaBeach from '../../../assets/photos/homepage/MirissaBeach.jpg';
 import beachgateways from '../../../assets/photos/homepage/BeachGetaways.jpeg';
 import wildlife from '../../../assets/photos/homepage/WildlifeSafaris.jpeg';
 import TheCulturalTriangle from '../../../assets/photos/homepage/TheCulturalTriangle.jpeg';
-import hill from '../../../assets/photos/homepage/hil.jpg';
+import hills from '../../../assets/photos/homepage/hil.jpg';
+import CulturalTriangle from '../../../assets/photos/homepage/CulturalTriangle.jpg';
+import hillcountry from '../../../assets/photos/homepage/hillcountry.jpg';
+import PristineBeaches from '../../../assets/photos/homepage/PristineBeaches.jpg';
+import Wildlife from '../../../assets/photos/homepage/Wildlife.jpg';
+
 
 
 
@@ -602,7 +606,7 @@ function Home() {
                     <Row>
                       <Col lg={6}>
                         <div className="destination-showcase-image">
-                          <img src="https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg" alt="Cultural Triangle" />
+                          <img src={CulturalTriangle} alt="Cultural Triangle" />
                         </div>
                       </Col>
                       <Col lg={6}>
@@ -638,7 +642,7 @@ function Home() {
                     <Row>
                       <Col lg={6}>
                         <div className="destination-showcase-image">
-                          <img src="https://images.pexels.com/photos/5388476/pexels-photo-5388476.jpeg" alt="Hill Country" />
+                          <img src={hillcountry} alt="Hill Country" />
                         </div>
                       </Col>
                       <Col lg={6}>
@@ -674,7 +678,7 @@ function Home() {
                     <Row>
                       <Col lg={6}>
                         <div className="destination-showcase-image">
-                          <img src="https://images.unsplash.com/photo-1586344483413-86d53498ac63?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sri Lanka Beaches" />
+                          <img src={PristineBeaches} alt="Sri Lanka Beaches" />
                         </div>
                       </Col>
                       <Col lg={6}>
@@ -710,7 +714,7 @@ function Home() {
                     <Row>
                       <Col lg={6}>
                         <div className="destination-showcase-image">
-                          <img src="https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg" alt="Sri Lanka Wildlife" />
+                          <img src= {Wildlife} alt="Sri Lanka Wildlife" />
                         </div>
                       </Col>
                       <Col lg={6}>
