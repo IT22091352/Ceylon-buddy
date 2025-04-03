@@ -34,7 +34,36 @@ function NavBar() {
   
   // Handle navigation with click event to ensure proper routing
   const handleNavigation = (path) => {
-    navigate(path);
+    // Close the navbar if it's open on mobile
+    if (expanded) {
+      setExpanded(false);
+    }
+    
+    // Check if we're navigating to contact page with intention to book
+    if (path === '/contact') {
+      // If we're already on the contact page, just scroll to the section
+      if (window.location.pathname === '/contact') {
+        const bookSection = document.getElementById('book-guide-section');
+        if (bookSection) {
+          bookSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // Navigate to contact page and then scroll after page loads
+        navigate(path);
+        // Set a small timeout to ensure the page has loaded before scrolling
+        setTimeout(() => {
+          const bookSection = document.getElementById('book-guide-section');
+          if (bookSection) {
+            bookSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 500);
+      }
+    } else {
+      // For other pages, just navigate normally
+      navigate(path);
+    }
+    
+    // Scroll to top of the page for other navigation
     window.scrollTo(0, 0);
   };
   
@@ -102,7 +131,10 @@ function NavBar() {
             <Button 
               as={Link} 
               to="/contact" 
-              onClick={(e) => { e.preventDefault(); handleNavigation('/contact'); }}
+              onClick={(e) => { 
+                e.preventDefault(); 
+                handleNavigation('/contact'); 
+              }}
               className="contact-btn"
             >
               <i className="fas fa-calendar-check"></i> Book a Tour

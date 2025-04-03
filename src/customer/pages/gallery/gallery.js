@@ -19,6 +19,22 @@ import pidurangala from '../../../assets/photos/destination/pidurangala/pidurang
 import nuwaraeliyahero from '../../../assets/photos/destination/nuwaraeliya/nuwaraeliyahero.jpg'
 import Trincomalee from '../../../assets/photos/destination/Trincomalee/Trincomalee.jpg'
 import pasikuda from '../../../assets/photos/destination/pasikuda/pasikuda.jpg'
+import RoyalCaveTemple from '../../../assets/photos/destination/pidurangala/RoyalCaveTemple.jpg'
+import BoulderScramble from '../../../assets/photos/destination/pidurangala/BoulderScramble.jpg'
+import PidurangalaRoyalCaveTemple from '../../../assets/photos/destination/pidurangala/PidurangalaRoyalCaveTemple.jpg'
+import RecliningBuddhaStatue from '../../../assets/photos/destination/pidurangala/RecliningBuddhaStatue.jpg'
+import SurroundingWildlife from '../../../assets/photos/destination/pidurangala/SurroundingWildlife.jpg'
+import VictoriaPark from '../../../assets/photos/destination/nuwaraeliya/VictoriaPark.jpg'
+import PedroTeaEstate from '../../../assets/photos/destination/nuwaraeliya/PedroTeaEstate.jpg'
+import GregoryLake from '../../../assets/photos/destination/nuwaraeliya/GregoryLake.jpg'
+import HakgalaBotanicalGardens from '../../../assets/photos/destination/nuwaraeliya/HakgalaBotanicalGardens.jpg'
+import ColonialArchitecture from '../../../assets/photos/destination/nuwaraeliya/ColonialArchitecture.jpeg'
+import Nilaveli from '../../../assets/photos/destination/Trincomalee/Nilaveli.jpg'
+import Koneswaram from '../../../assets/photos/destination/Trincomalee/Koneswaram.jpeg'
+import KanniyaHotSprings from '../../../assets/photos/destination/Trincomalee/KanniyaHotSprings.jpeg'
+import PigeonIsland from '../../../assets/photos/destination/Trincomalee/PigeonIsland.jpeg'
+import FortFrederick from '../../../assets/photos/destination/Trincomalee/FortFrederick.jpg'
+import PasikudaBay from '../../../assets/photos/destination/pasikuda/PasikudaBay.jpeg'
 
 
 
@@ -179,27 +195,27 @@ const sriLankanPlaces = [
         {
           name: "Pidurangala Royal Cave Temple",
           description: "At the base of the rock lies the ancient Pidurangala Royal Cave Temple, commissioned by King Kashyapa in the 5th century. The temple features a reclining Buddha statue partially reconstructed in the 20th century, with the original head and portions of the torso still carrying the authentic ancient craftsmanship. The cave walls show evidence of ancient paintings similar to those at Sigiriya, though less preserved. This historical site provides context for the climb ahead, connecting visitors to the rock's long human history and Buddhist heritage before they begin their ascent.",
-          image: "https://images.unsplash.com/photo-1601623206103-a29814a62b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: RoyalCaveTemple,
         },
         {
           name: "The Boulder Scramble",
           description: "The final section of the climb presents an exhilarating challenge as the defined stairway gives way to a natural obstacle course of massive boulders. Unlike the structured steps of Sigiriya, this segment requires climbers to navigate through, around, and over giant rocks using hands and feet, creating a true adventure experience. Narrow passages between boulders, natural rock staircases, and occasional handholds worn smooth by centuries of climbers make this portion particularly memorable. The scramble adds an element of personal achievement to reaching the summit, as each climber must find their own path through this natural maze.",
-          image: "https://images.unsplash.com/photo-1577715806804-42c662031741?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: BoulderScramble
         },
         {
           name: "Summit Panorama and Sigiriya View",
           description: "The crowning jewel of Pidurangala is undoubtedly the breathtaking 360-degree panorama from its summit. The view encompasses the vast plains of north-central Sri Lanka, distant mountain ranges, and scattered lakes and reservoirs that shimmer in the sunlight. However, the most spectacular aspect is the perfect vantage point it offers of Sigiriya Rock Fortress rising dramatically from the forested landscape. This perspective reveals the true majesty of Sigiriya in its entirety—something impossible to appreciate when actually on Sigiriya itself. Photographers particularly treasure this view for capturing the iconic silhouette of the lion rock against colorful skies at sunrise and sunset.",
-          image: "https://images.unsplash.com/photo-1625378482328-69860f9a382e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          image: PidurangalaRoyalCaveTemple
         },
         {
           name: "Reclining Buddha Statue",
           description: "Near the summit lies a partially restored reclining Buddha sculpture carved into the rock face. Though it has weathered over centuries, the statue remains a significant archaeological feature and religious symbol. The original statue was largely destroyed over time, but restoration efforts have preserved its fundamental form. This ancient artifact serves as a reminder of Pidurangala's long history as a religious site and offers a moment of reflection during the climb. The setting of the statue, with natural rock formations framing it and open sky above, creates a uniquely peaceful atmosphere distinct from temple-housed Buddha images.",
-          image: "https://images.unsplash.com/photo-1577098691283-4dca7b6de3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: RecliningBuddhaStatue
         },
         {
           name: "Surrounding Wildlife and Ecosystem",
           description: "The slopes and surroundings of Pidurangala Rock support a diverse ecosystem that visitors can observe during their climb. Gray langur monkeys are frequently seen in the trees and on rocks along the path, while various bird species including peacocks and eagles soar overhead. The vegetation changes noticeably during the ascent, transitioning from lush forest at the base to hardy, wind-resistant shrubs near the summit. Early morning climbers might spot wildlife emerging for the day, adding a nature-watching dimension to what is already a remarkable cultural and scenic experience.",
-          image: "https://images.unsplash.com/photo-1577098634826-9d3e49bf75dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: SurroundingWildlife
         }
       ],
       activities: [
@@ -258,27 +274,27 @@ const sriLankanPlaces = [
         {
           name: "Victoria Park",
           description: "This beautifully maintained English-style garden in the heart of Nuwara Eliya was named after Queen Victoria and established during the British colonial era. The park spans 27 acres and showcases well-manicured lawns, colorful flower beds that change with the seasons, and magnificent old trees. Victoria Park is also a haven for bird watchers, with numerous endemic and migratory species including the Kashmir flycatcher and Indian blue robin making appearances during migration seasons. The park's serene atmosphere, picturesque bridges, and meandering streams create a peaceful retreat for nature lovers.",
-          image: "https://images.unsplash.com/photo-1577116268654-cc6f46901f8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: VictoriaPark
         },
         {
           name: "Pedro Tea Estate and Factory",
           description: "One of Sri Lanka's most historic tea plantations, Pedro Tea Estate offers fascinating insights into the processes behind the perfect cup of Ceylon tea. Visitors can tour the working factory to witness each stage of production—from the picking of the 'two leaves and a bud' to withering, rolling, fermenting, drying, and sorting. The estate's panoramic views of undulating tea fields where colorfully dressed tea pluckers work with remarkable speed and precision provide quintessential images of Sri Lanka's highlands. The tour concludes with a tea tasting session where visitors can appreciate the distinctive flavors of high-grown tea.",
-          image: "https://images.unsplash.com/photo-1571802374626-c944d8d0c1a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: PedroTeaEstate
         },
         {
           name: "Gregory Lake",
           description: "Created in 1873 by damming the Nanu Oya river during the governorship of Sir William Gregory, this picturesque lake serves as a recreational focal point for Nuwara Eliya. The lake and its surrounding park offer various activities including boat rides, horseback riding, and jet skiing. The well-maintained walking path that circles the lake provides a pleasant 2.8-kilometer stroll with beautiful views of the surrounding hills and town. During April's season (the Sri Lankan New Year period), the lake becomes especially vibrant with festivities, food stalls, and cultural performances that showcase both colonial heritage and local traditions.",
-          image: "https://images.unsplash.com/photo-1562459664-4457a222882b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          image: GregoryLake
         },
         {
           name: "Hakgala Botanical Gardens",
           description: "Located about 10 kilometers from Nuwara Eliya, Hakgala is one of the three main botanical gardens in Sri Lanka. Established in 1861 as an experimental garden for cinchona cultivation, it now houses over 10,000 species of plants including roses, orchids, ferns, and medicinal plants. The gardens are magnificently situated on the slopes of Hakgala Rock, with terraced sections rising up the hillside to reveal new vistas and plant collections. According to the Ramayana epic, Hakgala is believed to be the pleasure garden (Ashok Vatika) where the demon king Ravana kept Sita captive, adding mythological significance to its botanical importance.",
-          image: "https://images.unsplash.com/photo-1563442744-0a9ca016b9c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image:HakgalaBotanicalGardens
         },
         {
           name: "Colonial Architecture and Heritage Buildings",
           description: "Nuwara Eliya's distinctive architectural heritage includes numerous well-preserved colonial buildings that transport visitors back to 19th-century England. The Tudor-style Hill Club, formerly a British gentlemen's club established in 1876, still maintains many of its original features and traditions. The red-brick Victorian post office, with its clock tower and distinctive British design, remains a functioning postal service. Other notable buildings include the Holy Trinity Church with its red-tiled roof and stained glass windows, the Grand Hotel (originally the mansion of Governor Sir Edward Barnes), and numerous quaint cottages with English country gardens, all contributing to the town's unique 'Little England' atmosphere.",
-          image: "https://images.unsplash.com/photo-1568198473832-b6b0f46328c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: ColonialArchitecture
         }
       ],
       activities: [
@@ -337,27 +353,27 @@ const sriLankanPlaces = [
         {
           name: "Koneswaram Temple and Swami Rock",
           description: "Perched dramatically on a cliff 130 meters above the ocean, this ancient Hindu temple dedicated to Lord Shiva dates back over 2,500 years, though the current structure was largely rebuilt after Portuguese destruction in the 17th century. The temple's breathtaking location on Swami Rock (also called Lover's Leap) offers panoramic views of the bay and ocean. Inside, the main shrine houses a lingam (symbolic representation of Shiva) and colorful statues of various Hindu deities. During April's new year celebrations and July/August's Aadi Amavasai festival, the temple comes alive with thousands of pilgrims participating in vibrant ceremonies, creating a cultural spectacle that contrasts beautifully with the temple's serene coastal setting.",
-          image: "https://images.unsplash.com/photo-1605004670074-85667859ae37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          image: Koneswaram
         },
         {
           name: "Nilaveli and Uppuveli Beaches",
           description: "These stunning stretches of coastline north of Trincomalee town represent some of Sri Lanka's most pristine beaches. Nilaveli, approximately 10 kilometers from town, features a wide expanse of powdery white sand meeting crystal-clear turquoise waters, with swaying palm trees providing natural shade. The beach's gentle gradient makes it excellent for swimming. Uppuveli, slightly closer to town, offers a similar paradise with a more developed beachfront area featuring small guesthouses and seafood restaurants. Both beaches are relatively uncrowded compared to southern coast destinations, providing a more peaceful atmosphere where visitors can truly unwind while enjoying the warm waters of the Bay of Bengal.",
-          image: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: Nilaveli
         },
         {
           name: "Pigeon Island National Park",
           description: "Located about 1 kilometer offshore from Nilaveli Beach, this small island marine sanctuary is named for the rock pigeons that nest there. The island features two main coral reef systems that support an extraordinary diversity of coral species, reef fish, and sea turtles. Recognized as one of Sri Lanka's two marine national parks, it offers some of the country's best snorkeling and diving experiences, with healthy coral gardens and the chance to swim alongside blacktip reef sharks, sea turtles, and hundreds of colorful reef fish species. The island also features small, picturesque beaches and natural rock pools, making it an ideal day trip combining snorkeling, beach relaxation, and nature observation.",
-          image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: PigeonIsland
         },
         {
           name: "Kanniya Hot Springs",
           description: "Located about 8 kilometers from Trincomalee town, these natural hot springs consist of seven wells of varying temperatures, each offering therapeutic mineral waters believed to have healing properties. According to Hindu legend, the springs were created when Lord Ravana struck the ground with his sword in grief after his mother's death, seeking water for her funeral rites. Today, the site is a popular attraction where visitors can experience the unusual sensation of naturally heated water in a tropical climate. Each of the seven wells has a slightly different temperature, and visitors use the provided buckets to pour water over themselves. The simple, unassuming setting adds to the authentic cultural experience, offering insights into local traditions and beliefs surrounding these geothermal waters.",
-          image: "https://images.unsplash.com/photo-1584091388815-27ed2037b26b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: KanniyaHotSprings
         },
         {
           name: "Fort Frederick",
           description: "Built originally by Portuguese colonists in 1623 on the site of the destroyed Koneswaram temple, then rebuilt by the Dutch, and later occupied by the British, this star-shaped fort stands as a testament to the region's colonial history and strategic importance. Today, the fort houses a Sri Lankan military base but remains open to visitors. Walking through its massive gates and along the walls offers a journey through colonial history, with views of colonial-era buildings, deer freely roaming the grounds, and splendid vistas of the harbor. The fort serves as the access point to Koneswaram Temple, with the path leading through the fort's grounds and up Swami Rock, adding a historical dimension to the spiritual journey to the temple.",
-          image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          image: FortFrederick
         }
       ],
       activities: [
@@ -416,7 +432,7 @@ const sriLankanPlaces = [
         {
           name: "Pasikuda Bay's Shallow Waters",
           description: "The bay's signature feature is its extraordinarily shallow, crystal-clear waters that extend up to 250-500 meters offshore before deepening. This natural phenomenon creates a massive, waist-deep aquamarine swimming area with a soft sandy bottom that remains warm from the tropical sun. The water's remarkable clarity allows visitors to see small fish and occasionally starfish against the light-colored sand. During low tide, the shallow area expands even further, and the gentle gradient makes it an exceptionally safe environment for children, non-swimmers, and those who prefer relaxed wading over vigorous swimming. The bay's orientation also delivers spectacular sunrises over the water, casting golden light across the tranquil morning sea.",
-          image: "https://images.unsplash.com/photo-1564414990779-8f9b92960dde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+          image: PasikudaBay,
         },
         {
           name: "Pristine Beach Coastline",
@@ -509,6 +525,19 @@ function Gallery() {
 
   return (
     <div className="gallery-page">
+      {/* Enhanced Sri Lankan Themed Background Icons */}
+      <div className="sl-background-icons">
+        <div className="icon coconut-icon"></div>
+        <div className="icon shellfish-icon"></div>
+        <div className="icon palmleaf-icon"></div>
+        <div className="icon cinnamon-icon"></div>
+        <div className="icon tealeaf-icon"></div>
+        <div className="icon coconut-icon"></div>
+        <div className="icon shellfish-icon"></div>
+        <div className="icon elephant-icon"></div>
+        <div className="icon palmleaf-icon"></div>
+      </div>
+      
       {/* Hero Section */}
       <div className="gallery-hero">
         <div className="hero-content">

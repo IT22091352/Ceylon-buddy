@@ -263,6 +263,71 @@ section {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1;
+}
+
+/* Create animated border effect using pseudo-element */
+.form-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, 
+    var(--primary) 0%, 
+    #0a9396 25%, 
+    var(--accent) 50%, 
+    #0a9396 75%, 
+    var(--primary) 100%);
+  border-radius: 17px; /* slightly larger than container */
+  z-index: -1;
+  background-size: 200% auto;
+  animation: animatedBorder 6s linear infinite;
+  opacity: 0.8;
+}
+
+/* Effect for form focus state */
+.form-container:focus-within::before {
+  animation-duration: 3s; /* faster animation when form is in focus */
+  opacity: 1;
+}
+
+@keyframes animatedBorder {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Add subtle pulse effect on hover */
+.form-container:hover::before {
+  animation: animatedBorder 6s linear infinite, pulseBorder 2s ease-in-out infinite;
+}
+
+@keyframes pulseBorder {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Add inner container to maintain white background */
+.form-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: 15px;
+  z-index: -1;
 }
 
 .form-container h3 {
