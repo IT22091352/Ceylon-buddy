@@ -194,21 +194,20 @@ function About() {
               </div>
             </Col>
           </Row>
-          <Row className="mt-5">
+          <Row className="mt-5 justify-content-center">
             {teamMembers.map((member) => (
               <Col key={member.id} md={4} className="mb-4">
                 <div className="team-card">
-                  <div className="team-img-container">
-                    <img src={member.image} alt={member.name} />
+                  <div className="team-img-container d-flex justify-content-center align-items-center">
+                    <img src={member.image} alt={member.name} className="team-image" />
                   </div>
                   <div className="team-content">
                     <h3>{member.name}</h3>
                     <div className="team-role">{member.role}</div>
                     <p>{member.bio}</p>
                     <div className="team-social">
-                      <a href="#!" className="social-link"><i className="fab fa-linkedin-in"></i></a>
-                      <a href="#!" className="social-link"><i className="fab fa-twitter"></i></a>
-                      <a href="#!" className="social-link"><i className="fas fa-envelope"></i></a>
+                      <a href="tel:+94719928373" className="social-link"><i className="fab fa-whatsapp"></i></a>
+                      <a href="mailto:ceylonbuddytour@gmail.com" className="social-link"><i className="fas fa-envelope"></i></a>
                     </div>
                   </div>
                 </div>

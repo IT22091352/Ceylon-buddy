@@ -300,6 +300,9 @@
   height: 300px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .team-img-container img {
@@ -307,6 +310,10 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
+}
+
+.team-image {
+  object-position: center;
 }
 
 .team-card:hover .team-img-container img {
