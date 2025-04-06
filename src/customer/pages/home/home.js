@@ -29,6 +29,7 @@ import Wildlife from "../../../assets/photos/homepage/Wildlife.jpg";
 import kandyfeedback from "../../../assets/photos/homepage/feedback/kandyfeedback.jpg";
 import feedbackpidurangala from "../../../assets/photos/homepage/feedback/feedbackpidurangala.jpg"
 import feedback3 from "../../../assets/photos/homepage/feedback/feedback3.jpg"
+import letterheadPdf from "../../../assets/letterhead/Letterhead-CeylonBuddy.pdf";
 
 
 function Home() {
@@ -1125,21 +1126,21 @@ function Home() {
 
             {/* Modern download button with enhanced interactive elements */}
             <div className="download-button-container pt-10 ">
-              <Button
-                className="letterhead-download-btn"
-                href="/downloads/ceylon-buddy-tourist-letterhead.pdf"
-                download
-              >
-                <span className="download-icon-wrapper">
-                  <i className="fas fa-file-pdf"></i>
-                </span>
-                <span className="download-text">
-                  <span className="download-title">Download Letter Head</span>
-                </span>
-                <span className="download-arrow">
-                  <i className="fas fa-arrow-down"></i>
-                </span>
-              </Button>
+            <Button
+  className="letterhead-download-btn"
+  href={letterheadPdf}
+  download
+>
+  <span className="download-icon-wrapper">
+    <i className="fas fa-file-pdf"></i>
+  </span>
+  <span className="download-text">
+    <span className="download-title">Download Letter Head</span>
+  </span>
+  <span className="download-arrow">
+    <i className="fas fa-arrow-down"></i>
+  </span>
+</Button>
             </div>
           </div>
         </Container>
