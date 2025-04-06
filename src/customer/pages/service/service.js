@@ -25,6 +25,11 @@ import queens from '../../../assets/photos/servicepage/dayPlans/queens.jpg';
 import nelligala from '../../../assets/photos/servicepage/dayPlans/nelligala.jpg';
 import wildlife from '../../../assets/photos/servicepage/dayPlans/wildlife.jpg';
 import colombo from '../../../assets/photos/servicepage/dayPlans/colombo.jpg';
+import kandyfeedback from '../../../assets/photos/servicepage/feedback/kandyfeedback.jpg'
+import feedbackpidurangala from '../../../assets/photos/servicepage/feedback/feedbackpidurangala.jpg'
+import feedback3 from '../../../assets/photos/servicepage/feedback/feedback3.jpg'
+import hillcountry from '../../../assets/photos/homepage//hillcountry.jpg'
+
 
 function Service() {
   // Services data
@@ -86,7 +91,7 @@ function Service() {
       name: "Sarah Johnson",
       location: "Australia",
       quote: "The personalized itinerary Ceylon Buddy created for us was perfect. They took care of every detail, allowing us to fully enjoy the beauty of Sri Lanka.",
-      avatar: "https://randomuser.me/api/portraits/women/32.jpg",
+      avatar: kandyfeedback,
       rating: 5
     },
     {
@@ -94,7 +99,7 @@ function Service() {
       name: "Michael Chen",
       location: "Singapore",
       quote: "Our guide was knowledgeable and friendly. The accommodations were excellent and the wildlife safari exceeded our expectations.",
-      avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+      avatar: feedbackpidurangala,
       rating: 5
     },
     {
@@ -102,7 +107,7 @@ function Service() {
       name: "Emma Rodriguez",
       location: "United Kingdom",
       quote: "Ceylon Buddy made our honeymoon magical. Their attention to detail and personalized service made all the difference.",
-      avatar: "https://randomuser.me/api/portraits/women/62.jpg",
+      avatar:feedback3,
       rating: 5
     }
   ];
@@ -584,7 +589,7 @@ function Service() {
           id: 1,
           title: "Ultimate Sri Lanka Experience",
           subtitle: "Culture + Hill Country + Wildlife + Beach",
-          image: "https://images.unsplash.com/photo-1578551712292-9a675b7ee1c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          image: hillcountry,
           highlights: [
             "Day 1: Arrival in Colombo & Drive to Sigiriya",
             "Arrive at Colombo International Airport",
@@ -1085,7 +1090,7 @@ function Service() {
               </div>
             </Col>
           </Row>
-          <Row className="mt-4">
+          <Row className="mt-4 ">
             {testimonials.map((testimonial) => (
               <Col key={testimonial.id} md={4}>
                 <div className="testimonial-card">

@@ -27,7 +27,9 @@ import hillcountry from "../../../assets/photos/homepage/hillcountry.jpg";
 import PristineBeaches from "../../../assets/photos/homepage/PristineBeaches.jpg";
 import Wildlife from "../../../assets/photos/homepage/Wildlife.jpg";
 import kandyfeedback from "../../../assets/photos/homepage/feedback/kandyfeedback.jpg";
-import travel from "../../../assets/photos/homepage/travel.jpg";
+import feedbackpidurangala from "../../../assets/photos/homepage/feedback/feedbackpidurangala.jpg"
+import feedback3 from "../../../assets/photos/homepage/feedback/feedback3.jpg"
+
 
 function Home() {
   // State for animated counting
@@ -164,7 +166,7 @@ function Home() {
       location: "Australia",
       quote:
         "Our tour with Ceylon Buddy was the highlight of our vacation. The guides knew every hidden gem and made us feel right at home in Sri Lanka.",
-      avatar: "https://randomuser.me/api/portraits/women/32.jpg",
+      avatar: feedbackpidurangala,
       rating: 5,
     },
     {
@@ -182,7 +184,7 @@ function Home() {
       location: "United Kingdom",
       quote:
         "Ceylon Buddy made our honeymoon truly magical. Our guide went above and beyond to create unforgettable experiences and capture perfect moments.",
-      avatar: "https://randomuser.me/api/portraits/women/62.jpg",
+      avatar: feedback3,
       rating: 5,
     },
   ];
@@ -989,10 +991,7 @@ function Home() {
           <div className="section-header text-center">
             <div className="section-subtitle">Happy Travelers</div>
             <h2 className="section-title">What Our Clients Say</h2>
-            <p className="section-description">
-              Read genuine reviews from travelers who experienced Sri Lanka with
-              Ceylon Buddy
-            </p>
+          
           </div>
 
           <div className="testimonial-carousel-container animate-on-scroll fade-up delay-2">
@@ -1102,11 +1101,8 @@ function Home() {
 
       {/*  Letterhead Download Section - Professional Tourism Style*/}
       <section>
-        {/* Enhanced gradient overlay for better text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-800/75 to-slate-900/80"></div>
+    
 
-        {/* Subtle pattern overlay for texture */}
-        <div className="absolute inset-0 opacity-10 bg-pattern"></div>
 
         <Container className="relative z-10">
           <div className="section-header text-center text-white mx-auto max-w-3xl">
@@ -1116,7 +1112,7 @@ function Home() {
             </div>
 
             {/* Refined typography for title */}
-            <h2 className="section-title text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-on-scroll fade-up delay-1 mb-6">
+            <h2 className="section-title text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-on-scroll fade-up delay-1 mb-6 pt-1">
               Ready for an Unforgettable{" "}
               <span className="text-gradient">Adventure?</span>
             </h2>
@@ -1166,7 +1162,7 @@ function Home() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Begin Your Sri Lankan Journey Today
           </h2>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="text-xl text-gray-200 mb-8 pb-10">
             Let's create unforgettable memories together
           </p>
           <div className="cta-buttons flex flex-col md:flex-row gap-4 justify-center">

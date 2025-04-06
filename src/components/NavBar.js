@@ -33,38 +33,34 @@ function NavBar() {
   }, [location.pathname]);
   
   // Handle navigation with click event to ensure proper routing
-  const handleNavigation = (path) => {
+  const handleNavigation = (path, isBookTour = false) => {
     // Close the navbar if it's open on mobile
     if (expanded) {
       setExpanded(false);
     }
-    
-    // Check if we're navigating to contact page with intention to book
+  
     if (path === '/contact') {
-      // If we're already on the contact page, just scroll to the section
-      if (window.location.pathname === '/contact') {
-        const bookSection = document.getElementById('book-guide-section');
-        if (bookSection) {
-          bookSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      } else {
-        // Navigate to contact page and then scroll after page loads
+      if (isBookTour) {
+        // Scroll to the book-guide-section if "Book a Tour" button is clicked
         navigate(path);
-        // Set a small timeout to ensure the page has loaded before scrolling
         setTimeout(() => {
-          const bookSection = document.getElementById('book-guide-section');
+          const bookSection = document.querySelector('.book-guide-section');
           if (bookSection) {
             bookSection.scrollIntoView({ behavior: 'smooth' });
           }
-        }, 500);
+        }, 0); // Ensure navigation completes before scrolling
+      } else {
+        // Navigate to the contact page without scrolling
+        if (window.location.pathname !== '/contact') {
+          navigate(path);
+        }
       }
     } else {
       // For other pages, just navigate normally
       navigate(path);
+      // Scroll to top of the page for other navigation
+      window.scrollTo(0, 0);
     }
-    
-    // Scroll to top of the page for other navigation
-    window.scrollTo(0, 0);
   };
   
   return (
@@ -133,7 +129,7 @@ function NavBar() {
               to="/contact" 
               onClick={(e) => { 
                 e.preventDefault(); 
-                handleNavigation('/contact'); 
+                handleNavigation('/contact', true); 
               }}
               className="contact-btn"
             >

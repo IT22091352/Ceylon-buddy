@@ -321,11 +321,11 @@ section {
 }
 
 .testimonial-avatar {
-  width: 70px;
-  height: 70px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto 20px;
+  margin: 0 auto 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -1484,53 +1484,148 @@ section {
 }
 
 .tour-days-badge {
-  background-color: #0a9396;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 30px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-right: 15px;
-  min-width: 80px;
+  position: relative; /* Ensure it stays within its container */
+  margin-bottom: 10px; /* Add spacing below the badge */
+  z-index: 1; /* Prevent overlapping with other elements */
+  align-self: flex-start; /* Align properly within its container */
+  margin-top: 1px; /* Move slightly upwards */
+  margin-left: 1px; /* Move slightly to the left */
+  padding: 8px 15px; /* Ensure consistent padding */
+  font-size: 0.9rem; /* Adjust font size for better readability */
   text-align: center;
 }
 
-.tour-title-wrapper h4 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--dark);
-  margin-bottom: 5px;
+.tour-detail-modal .tour-days-badge {
+  position: absolute; /* Ensure it stays positioned relative to the modal */
+  top: 15px; /* Adjust to move it slightly down */
+  left: 15px; /* Adjust to move it slightly right */
+  z-index: 2; /* Ensure it appears above other elements */
+  margin: 0; /* Remove any additional margins */
+  padding: 8px 15px; /* Maintain consistent padding */
+  font-size: 0.9rem; /* Ensure readability */
+  border-radius: 30px; /* Keep the rounded style */
+  background-color: #0a9396; /* Teal background */
+  color: white; /* Text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
 }
 
-.tour-subtitle-modal {
-  color: var(--primary);
-  font-size: 0.9rem;
-  font-weight: 500;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tour-detail-modal .tour-days-badge {
+    top: 10px; /* Adjust for smaller screens */
+    left: 10px; /* Adjust for smaller screens */
+    font-size: 0.8rem; /* Slightly smaller font */
+    padding: 6px 12px; /* Adjust padding */
+  }
 }
 
-.tour-detail-tabs {
-  border-bottom: 1px solid #eee;
+@media (max-width: 480px) {
+  .tour-detail-modal .tour-days-badge {
+    top: 8px; /* Further adjust for very small screens */
+    left: 8px; /* Further adjust for very small screens */
+    font-size: 0.75rem; /* Smaller font for readability */
+    padding: 5px 10px; /* Adjust padding */
+  }
 }
 
-.tour-detail-tabs .nav-link {
-  color: var(--gray);
-  font-weight: 600;
-  padding: 12px 20px;
-  border: none;
-  border-bottom: 3px solid transparent;
-  border-radius: 0;
-  transition: all 0.3s;
-  margin-right: 5px;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tour-days-badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    min-width: 70px;
+    margin-bottom: 8px; /* Ensure spacing on smaller screens */
+    margin-top: 2px; /* Adjust for smaller screens */
+    margin-left: -4px; /* Adjust for smaller screens */
+  }
 }
 
-.tour-detail-tabs .nav-link:hover {
-  color: var(--primary);
+@media (max-width: 480px) {
+  .tour-days-badge {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    margin-bottom: 5px; /* Further reduce spacing for very small screens */
+    margin-top: 1px; /* Adjust for very small screens */
+    margin-left: -3px; /* Adjust for very small screens */
+  }
 }
 
-.tour-detail-tabs .nav-link.active {
-  color: #0a9396;
-  background: transparent;
-  border-bottom: 3px solid #0a9396;
+/* Fix for the other tour-days-badge used on cards */
+.tour-option-card .tour-days-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+/* Responsive Adjustments for Modal */
+@media (max-width: 768px) {
+  .modal-title-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .tour-days-badge {
+    margin-bottom: 10px;
+    /* Fixed positioning issue - ensure badge doesn't overlap with content */
+    position: relative;
+    z-index: 1;
+    align-self: flex-start;
+    margin-top: 5px;
+  }
+  
+  .tour-title-wrapper {
+    width: 100%;
+    padding-top: 5px; /* Add space after the badge */
+  }
+  
+  /* ...existing code... */
+}
+
+@media (max-width: 576px) {
+  /* ...existing code... */
+  
+  .tour-days-badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    min-width: 70px;
+  }
+  
+  .tour-title-wrapper h4 {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    line-height: 1.3;
+  }
+  
+  .tour-detail-modal .modal-header {
+    padding: 15px 20px;
+  }
+  
+  /* ...existing code... */
+}
+
+@media (max-width: 480px) {
+  /* ...existing code... */
+  
+  /* More specific tour days badge fixes for very small screens */
+  .tour-detail-modal .modal-title-content {
+    padding-right: 25px; /* Make space for the close button */
+  }
+  
+  .tour-detail-modal .tour-days-badge {
+    margin-bottom: 8px;
+  }
+  
+  .tour-option-card .tour-days-badge {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    top: 10px;
+    left: 10px;
+  }
+  
+  /* ...existing code... */
 }
 
 /* Tour Overview Tab */
@@ -1988,6 +2083,20 @@ section {
   
   .tour-days-badge {
     margin-bottom: 10px;
+    /* Fixed positioning issue - ensure badge doesn't overlap with content */
+    position: relative;
+    z-index: 1;
+    align-self: flex-start;
+    margin-top: 5px;
+  }
+  
+  .tour-title-wrapper {
+    width: 100%;
+    padding-top: 5px; /* Add space after the badge */
+  }
+  
+  .tour-days-badge {
+    margin-bottom: 10px;
   }
   
   .tour-features {
@@ -2032,6 +2141,39 @@ section {
   .book-now-btn {
     flex: 1 0 100%;
   }
+  
+  .tour-days-badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    min-width: 70px;
+  }
+  
+  .tour-title-wrapper h4 {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    line-height: 1.3;
+  }
+  
+  .tour-detail-modal .modal-header {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tour-detail-modal .modal-title-content {
+    padding-right: 25px; /* Make space for the close button */
+  }
+  
+  .tour-detail-modal .tour-days-badge {
+    margin-bottom: 8px;
+  }
+  
+  .tour-option-card .tour-days-badge {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    top: 10px;
+    left: 10px;
+  }
 }
 
 /* Share message styling */
@@ -2056,4 +2198,40 @@ section {
 @keyframes fadeIn {
   from { opacity: 0; transform: translate(-50%, 10px); }
   to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.tour-title-wrapper h4 {
+  margin-left: 80px; /* Add spacing to move it right of the day badge */
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-top: 5px;
+  line-height: 1.3;
+}
+
+.tour-subtitle-modal {
+  display: inline-block;
+  margin-left: 80px; /* Align with the title */
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  background-color: #2563eb; /* Blue background */
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  margin-top: 5px;
+  animation: pulse-blue 1.5s infinite; /* Add animation */
+}
+
+@keyframes pulse-blue {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
 }
