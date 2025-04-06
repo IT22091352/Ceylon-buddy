@@ -936,7 +936,7 @@
 }
 
 .activity-text {
-  font-weight: 500;
+  font-weight: 100;
   color: var(--dark);
 }
 
@@ -965,6 +965,45 @@
   text-align: center;
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+/* Activities List Styling */
+.activities-list {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.activity-icon {
+  color: #0a9396;
+  margin-right: 10px;
+  font-size: 1.1rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.activity-text {
+  flex: 1;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .activity-item {
+    margin-bottom: 15px;
+  }
+  
+  .activity-text {
+    font-size: 0.95rem;
+  }
 }
 
 .conclusion-section {

@@ -35,6 +35,7 @@ import KanniyaHotSprings from '../../../assets/photos/destination/Trincomalee/Ka
 import PigeonIsland from '../../../assets/photos/destination/Trincomalee/PigeonIsland.jpeg'
 import FortFrederick from '../../../assets/photos/destination/Trincomalee/FortFrederick.jpg'
 import PasikudaBay from '../../../assets/photos/destination/pasikuda/PasikudaBay.jpeg'
+import sigiriyaactivity from '../../../assets/photos/destination/sigiriyaactivity.jpg'
 
 
 
@@ -857,7 +858,7 @@ function Gallery() {
                       <h3 className="tab-title">Things to Do in {selectedPlace.name}</h3>
                       <div className="activities-container">
                         <Row>
-                          <Col lg={6}>
+                          <Col lg={12}>
                             <div className="activities-list">
                               {selectedPlace.fullDetails.activities.map((activity, idx) => (
                                 <div key={idx} className="activity-item">
@@ -867,18 +868,6 @@ function Gallery() {
                                   </div>
                                 </div>
                               ))}
-                            </div>
-                          </Col>
-                          <Col lg={6}>
-                            <div className="activities-image">
-                              <img 
-                                src="../../../assets/photos/destination/sigiriyaactivity.jpg" 
-                                alt="Activities in Galle Fort"
-                                className="img-fluid rounded"
-                              />
-                              <div className="image-caption">
-                                <i className="fas fa-camera"></i> Experience the charm of {selectedPlace.name}
-                              </div>
                             </div>
                           </Col>
                         </Row>
