@@ -227,7 +227,6 @@ function Contact() {
                 <h3>Why Book with Ceylon Buddy?</h3>
                 <ul className="benefits-list">
                   <li><i className="fas fa-certificate"></i> Certified local guides with deep knowledge</li>
-                  <li><i className="fas fa-language"></i> Multi-lingual tour guides available</li>
                   <li><i className="fas fa-star"></i> Personalized experience tailored to your interests</li>
                   <li><i className="fas fa-route"></i> Access to hidden gems and local experiences</li>
                   <li><i className="fas fa-hand-holding-heart"></i> Support local communities through sustainable tourism</li>

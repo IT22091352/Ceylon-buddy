@@ -936,9 +936,7 @@ function Service() {
                   <Card.Body>
                     <Card.Title className="service-title">{service.title}</Card.Title>
                     <Card.Text>{service.description}</Card.Text>
-                    <Button variant="link" className="service-btn">
-                      Learn More <i className="fas fa-long-arrow-alt-right ms-1"></i>
-                    </Button>
+                    
                   </Card.Body>
                 </Card>
               </Col>
