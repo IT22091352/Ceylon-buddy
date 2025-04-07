@@ -30,7 +30,7 @@ import kandyfeedback from "../../../assets/photos/homepage/feedback/kandyfeedbac
 import feedbackpidurangala from "../../../assets/photos/homepage/feedback/feedbackpidurangala.jpg"
 import feedback3 from "../../../assets/photos/homepage/feedback/feedback3.jpg"
 import letterheadPdf from "../../../assets/letterhead/Letterhead-CeylonBuddy.pdf";
-
+import FeedbackForm from '../../../components/FeedbackForm';
 
 function Home() {
   // State for animated counting
@@ -1147,6 +1147,11 @@ function Home() {
       </section>
 
       {/* Letterhead Download Section - Professional Tourism Style */}
+
+      {/* Testimonials and Feedback Form */}
+      <section className="feedback-section py-16 md:py-24">
+        <FeedbackForm />
+      </section>
 
       {/* Call-to-Action with Enhanced Background */}
       <section className="final-cta py-20 md:py-28 relative">
