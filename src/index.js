@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import NavBar from './components/NavBar';
+//favicon.ico
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
